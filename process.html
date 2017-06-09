@@ -1,0 +1,519 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <title>京东招聘——招聘流程</title>
+  <link rel="stylesheet" href="css/base_2.css"/>
+  <link rel="stylesheet" href="css/propaganda.css"/>
+  <SCRIPT type="text/javascript">
+	 var springUrl = "";   //路径全局变量
+  </SCRIPT>
+</head>
+<body>
+  <!-- 通用顶栏 -->
+  <script src="js/jquery_2.js"></script>
+<script src="js/footer_2.js"></script>
+
+  <!-- 通用顶栏 -->
+  <div class="header">
+    <div class="wrap">
+      <!-- logo -->
+      <a href="/"><div class="logo">京东校园招聘</div></a>
+
+      <!-- 登录栏 -->
+      <div class="login">
+        <!-- 登录栏 未登录状态 -->
+        <a onclick="login();"; href="javascript:;">登录</a>&nbsp;|&nbsp;<a title="注册后需要重新登录招聘系统 "  onclick="register();"; href="javascript:;">注册</a>
+
+      </div>
+
+      <!-- 导航 -->
+      <ul class="nav">
+        <!-- class有  nav-curr  则为当前选中 -->
+        <li><a href="index.html" id="a1" class="nav-link nav-curr" onclick="changeStyle(1)">首&nbsp;&nbsp;页</a></li>
+        <li><a href="position.html" id="a6" class="nav-link J-nav-sub">招聘职位</a></li>
+        <!--<li><a href="/web/static/forward?to=property-layout&t=5" id="a5" class="nav-link J-nav-sub">产业布局</a></li>-->
+
+        <li><a href="process.html" id="a4" class="nav-link" >招聘流程</a></li>
+        <!--  <li><a href="/web/message/announcement_index?t=7" id="a7" class="nav-link">消息公告</a></li>-->
+
+        <!--    <li>
+             <a href="javascript:;" id="a3" class="nav-link J-nav-sub " >人才项目</a>
+             <div class="nav-sub J-nav-sub-list">
+                 <a href="/web/static/forward?to=jd-run&t=3">京锐实习夏令营/JD RUN</a>
+                 <a href="/web/static/forward?to=tet&t=3" >管理培训生/TET</a>
+                 <a href="/web/static/forward?to=jd-imt&t=3">国际管培/IMT</a>
+             </div>
+           </li>
+         -->
+        <li>
+          <a href="talents.html" id="a3" class="nav-link J-nav-sub " >人才项目</a>
+          <div class="nav-sub J-nav-sub-list" style="display: none;">
+            <a href="">IMT 国际管培生</a>
+            <a href="">TET 管理培训生</a>
+            <a href="">TFS 区域未来之星</a>
+            <a href="">JD RUN 京锐实习夏令营</a>
+          </div>
+        </li>
+
+        <li><a href="help.html" id="a9" class="nav-link">招聘帮助</a></li>
+        <li>
+          <a href="about.html" id="a2" class="nav-link J-nav-sub " >关于京东</a>
+          <div class="nav-sub J-nav-sub-list" style="display: none;">
+            <a href="">京东介绍</a>
+            <a href="">校招视频</a>
+          </div>
+        </li>
+        <!--
+        <li><a href="/web/static/forward?to=about-jd&t=2" id="a2" class="nav-link J-nav-sub">关于京东</a></li>
+        <li><a href="/web/static/forward?to=video_list&t=8" id="a8" class="nav-link J-nav-sub">校招视频</a></li>
+         -->
+        <!--
+  <li><a href="/web/static/forward?to=announcement&t=7" id="a7" class="nav-link">消息公告</a></li>
+  -->
+      </ul>
+
+    </div>
+
+    <!-- 分享栏 -->
+    <div class="share" style="z-index: 999">
+        <ul>
+            <li class="share-wechat">
+                <a href="javascript:;"></a>
+                <div class="share-info"><img src="picture/wechatqr_2.jpg" alt="" style="z-index: 999"></div>
+            </li>
+            <li class="share-weibo">
+				<a href="javascript:;"></a>
+                <div class="share-info"><img src="picture/weiboqr_2.png" alt="" style="z-index: 999;width: 103px;height: 103px;"></div>
+			</li>
+        </ul>
+    </div>
+</div>
+
+
+<script>
+try {
+	$(function(){
+	var i = "4";
+	   if(i!=""&&i!="null"){
+	     $("#a1").removeClass('nav-curr');
+		 $("#a"+i).addClass(' nav-curr'); 
+	   }
+
+//		$('.share-wechat').mouseover(
+//				function () {
+//                    $('.share .share-info').css("display","block");
+//                }
+//		);
+//        $('.share-wechat').mouseout(
+//                function () {
+//                    $('.share .share-info').css("display","none");
+//                }
+//        );
+	});
+
+
+} catch (e) {
+}
+ 
+</script>
+  <!-- 主体内容 -->
+  <div class="wrap propaganda_wrap">
+    <div class="propaganda_side">
+      <ul>
+        <li><div class="propaganda_subtit nav-recruit nav-curr"><span><i class="icon-recruit"></i>招聘流程</span></div></li>
+        <li><div class="propaganda_subtit nav-preach"><span><i class="icon-preach"></i>宣讲行程</div></li>
+      </ul>
+    </div>
+
+  	<div class="propaganda_main">
+      <div class="propaganda_recruit">
+          <div class="propaganda_main_tit">招聘流程</div>
+          <div class="propaganda-process">
+              <h3>一、实习生招聘</h3>
+              <div class="process-ctn"><strong>网申时间：</strong><span>2月24日-4月4日</span></div>
+              <div class="process-ctn"><strong>宣讲时间：</strong><span>3月10日-3月24日</span></div>
+              <div class="process-ctn"><strong>在线笔试：</strong><span>非技术类：4月6日</span></div>
+              <div class="process-ctn"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                  <span>技术类：4月7日</span></div>
+              <div class="process-ctn"><strong>线路面试：</strong><span>北京、武汉、成都：4月15日-4月20日</span></div>
+              <div class="process-ctn"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                  <span>大连、上海、广州、西安：4月22日-4月27日</span></div>
+              <div class="process-ctn"><strong>Offer发放：</strong><span>4月28日-5月10日</span></div>
+              <div class="process-ctn"><strong>入职时间：</strong><span>5月、6月、7月均有入职安排（录用者请参考邮件指引）</span></div>
+          </div>
+          <div class="propaganda-process">
+              <h3>二、京锐实习夏令营（JD RUN）项目</h3>
+              <div class="process-ctn"><strong>网申时间：</strong><span>2月24日-3月31日</span></div>
+              <div class="process-ctn"><strong>远程面试：</strong><span>3月1日-4月30日</span></div>
+              <div class="process-ctn"><strong>实习周期：</strong><span>7月3日-8月31日</span></div>
+          </div>
+      </div>
+      <div class="propaganda_preach">
+        <div class="propaganda_main_tit">宣讲行程</div>
+        <div class="propaganda-tag">
+          <a href="#" class="curr city" city="">全部</a>
+            <!--首行城市数量-->
+			<!--下弹出每行城市数量-->
+												<a href="javascript:void(0);" class="city" city="北京">北京</a>
+																				<a href="javascript:void(0);" class="city" city="广州">广州</a>
+																				<a href="javascript:void(0);" class="city" city="上海">上海</a>
+																				<a href="javascript:void(0);" class="city" city="成都">成都</a>
+																				<a href="javascript:void(0);" class="city" city="南京">南京</a>
+													<a  class="other-tag">其他</a>
+																																															<div class="other-lists">
+					<div class="other-list-row">
+											 													 													 													 													 													 																<a href="javascript:void(0);" class="city" city="武汉">武汉</a>
+						        												 																<a href="javascript:void(0);" class="city" city="西安">西安</a>
+						        												 																<a href="javascript:void(0);" class="city" city="大连">大连</a>
+						        												 						</div>
+				</div>
+			           <div class="propaganda-search-bar">
+            <input type="search" id="searchKeyWord" onKeyDown="keydownEvent()" placeholder="宣讲会标题或城市"><span  class="icon-search" id="search"></span>
+          </div>
+        </div>
+        <div id="talkDiv">
+		        <div class="propaganda-row">
+          <div class="school-info">
+            <h3 class="name">北京站-京东2017实习生招聘宣讲会</h3>
+            <div class="date">
+              <strong>宣讲时间:</strong>
+              <span>2017年3月13日 下午19:00</span>
+            </div>
+            <div class="address">
+              <strong>宣讲城市:</strong>
+              <span>北京</span>
+            </div>
+            <div class="address">
+              <strong>宣讲地点:</strong>
+              <span>北京市-海淀区-北京邮电大学-教学三号楼136（长年报告厅）</span>
+            </div>
+          </div>
+          <div class="desc-img">
+            <img src="picture/db725c26f2334844bfa679da42139790.jpg" alt="" />
+          </div>
+        </div>
+                <div class="propaganda-row">
+          <div class="school-info">
+            <h3 class="name">北京站-京东2017实习生招聘宣讲会</h3>
+            <div class="date">
+              <strong>宣讲时间:</strong>
+              <span>2017年3月15日 下午19:00</span>
+            </div>
+            <div class="address">
+              <strong>宣讲城市:</strong>
+              <span>北京</span>
+            </div>
+            <div class="address">
+              <strong>宣讲地点:</strong>
+              <span>北京市-海淀区-北京大学-英杰交流中心-月光厅</span>
+            </div>
+          </div>
+          <div class="desc-img">
+            <img src="picture/771fd1e122884041955ccdba4009bc8b.jpg" alt="" />
+          </div>
+        </div>
+                <div class="propaganda-row">
+          <div class="school-info">
+            <h3 class="name">广州站-京东2017实习生招聘宣讲会</h3>
+            <div class="date">
+              <strong>宣讲时间:</strong>
+              <span>2017年3月22日 下午19:00</span>
+            </div>
+            <div class="address">
+              <strong>宣讲城市:</strong>
+              <span>广州</span>
+            </div>
+            <div class="address">
+              <strong>宣讲地点:</strong>
+              <span>广州市-华南理工大学-A4-204</span>
+            </div>
+          </div>
+          <div class="desc-img">
+            <img src="picture/f4838bfb05d0456fbce201528d4d64b5.jpg" alt="" />
+          </div>
+        </div>
+                <div class="propaganda-row">
+          <div class="school-info">
+            <h3 class="name">上海站-京东2017实习生招聘宣讲会</h3>
+            <div class="date">
+              <strong>宣讲时间:</strong>
+              <span>2017年3月10日 下午19:00</span>
+            </div>
+            <div class="address">
+              <strong>宣讲城市:</strong>
+              <span>上海</span>
+            </div>
+            <div class="address">
+              <strong>宣讲地点:</strong>
+              <span>上海市-复旦大学-邯郸校区光华东辅楼102</span>
+            </div>
+          </div>
+          <div class="desc-img">
+            <img src="picture/a680aadaf4814d4e8e508a7d5a18855b.jpg" alt="" />
+          </div>
+        </div>
+                <div class="propaganda-row">
+          <div class="school-info">
+            <h3 class="name">成都站-京东2017实习生招聘宣讲会</h3>
+            <div class="date">
+              <strong>宣讲时间:</strong>
+              <span>2017年3月21日 下午19:00</span>
+            </div>
+            <div class="address">
+              <strong>宣讲城市:</strong>
+              <span>成都</span>
+            </div>
+            <div class="address">
+              <strong>宣讲地点:</strong>
+              <span>电子科技大学-清水河校区活动中心2F圆厅-九洲厅</span>
+            </div>
+          </div>
+          <div class="desc-img">
+            <img src="picture/2f02a7fcd0e641bd9baa89ef60575a34.jpg" alt="" />
+          </div>
+        </div>
+                <div class="propaganda-row">
+          <div class="school-info">
+            <h3 class="name">北京站-技术专场面对面</h3>
+            <div class="date">
+              <strong>宣讲时间:</strong>
+              <span>2017年3月17日 下午19:00</span>
+            </div>
+            <div class="address">
+              <strong>宣讲城市:</strong>
+              <span>北京</span>
+            </div>
+            <div class="address">
+              <strong>宣讲地点:</strong>
+              <span>北京市-海淀区-中科院中关村校区S102</span>
+            </div>
+          </div>
+          <div class="desc-img">
+            <img src="picture/915899f97f254511b35aaecd40939717.jpg" alt="" />
+          </div>
+        </div>
+                <div class="propaganda-row">
+          <div class="school-info">
+            <h3 class="name">北京站-技术专场面对面</h3>
+            <div class="date">
+              <strong>宣讲时间:</strong>
+              <span>2017年3月10日 下午19:00</span>
+            </div>
+            <div class="address">
+              <strong>宣讲城市:</strong>
+              <span>北京</span>
+            </div>
+            <div class="address">
+              <strong>宣讲地点:</strong>
+              <span>北京市-海淀区-北京航空航天大学-3号楼215教室</span>
+            </div>
+          </div>
+          <div class="desc-img">
+            <img src="picture/15e409fab7764e2d93cee859efab3e5c.jpg" alt="" />
+          </div>
+        </div>
+                <div class="propaganda-row">
+          <div class="school-info">
+            <h3 class="name">武汉站-京东2017实习生招聘宣讲会</h3>
+            <div class="date">
+              <strong>宣讲时间:</strong>
+              <span>2017年3月23日 下午19:00</span>
+            </div>
+            <div class="address">
+              <strong>宣讲城市:</strong>
+              <span>武汉</span>
+            </div>
+            <div class="address">
+              <strong>宣讲地点:</strong>
+              <span>武汉市-华中科技大学-大学生活动中心B座305阶梯教室</span>
+            </div>
+          </div>
+          <div class="desc-img">
+            <img src="picture/723c9a62c8df4314922ea0686990c30e.jpg" alt="" />
+          </div>
+        </div>
+                <div class="propaganda-row">
+          <div class="school-info">
+            <h3 class="name">南京站-京东2017实习生招聘宣讲会</h3>
+            <div class="date">
+              <strong>宣讲时间:</strong>
+              <span>2017年3月24日 下午19:00</span>
+            </div>
+            <div class="address">
+              <strong>宣讲城市:</strong>
+              <span>南京</span>
+            </div>
+            <div class="address">
+              <strong>宣讲地点:</strong>
+              <span>南京市-南京大学-鼓楼校区逸夫报告厅</span>
+            </div>
+          </div>
+          <div class="desc-img">
+            <img src="picture/627aff33e2394c888b83841df0c306c7.jpg" alt="" />
+          </div>
+        </div>
+                <div class="propaganda-row">
+          <div class="school-info">
+            <h3 class="name">北京站-技术专场面对面</h3>
+            <div class="date">
+              <strong>宣讲时间:</strong>
+              <span>2017年3月14日 下午19:00</span>
+            </div>
+            <div class="address">
+              <strong>宣讲城市:</strong>
+              <span>北京</span>
+            </div>
+            <div class="address">
+              <strong>宣讲地点:</strong>
+              <span>北京市-清华大学-学生职业发展指导中心东风汽车会议厅</span>
+            </div>
+          </div>
+          <div class="desc-img">
+            <img src="picture/f446d41a6ef142c7b510f6a5a407d3a4.jpg" alt="" />
+          </div>
+        </div>
+                <div class="propaganda-row">
+          <div class="school-info">
+            <h3 class="name">西安站-京东2017实习生招聘宣讲会</h3>
+            <div class="date">
+              <strong>宣讲时间:</strong>
+              <span>2017年3月20日 下午19:00</span>
+            </div>
+            <div class="address">
+              <strong>宣讲城市:</strong>
+              <span>西安</span>
+            </div>
+            <div class="address">
+              <strong>宣讲地点:</strong>
+              <span>西安市-西安电子科技大学-北校区（老校区）阶梯教室601</span>
+            </div>
+          </div>
+          <div class="desc-img">
+            <img src="picture/bfc46be72638498a85ace37d8d4cd60c.jpg" alt="" />
+          </div>
+        </div>
+                <div class="propaganda-row">
+          <div class="school-info">
+            <h3 class="name">大连站-京东2017实习生招聘宣讲会</h3>
+            <div class="date">
+              <strong>宣讲时间:</strong>
+              <span>2017年3月15日 下午19:00</span>
+            </div>
+            <div class="address">
+              <strong>宣讲城市:</strong>
+              <span>大连</span>
+            </div>
+            <div class="address">
+              <strong>宣讲地点:</strong>
+              <span>大连市-大连理工大学-科技园酒店三楼2号会议室</span>
+            </div>
+          </div>
+          <div class="desc-img">
+            <img src="picture/2cff454774114b96bd545029540c979b.jpg" alt="" />
+          </div>
+        </div>
+            	</div>        
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+	<div class="wrap">
+		<ul class="friend-link">
+			<li><a href="//www.jd.com" target="_blank">京东(JD.COM)</a></li>
+			<li>|</li>
+			<li><a href="//zhaopin.jd.com" target="_blank">京东招聘</a></li>
+			<li>|</li>
+			<li><a href="//xiaoyuan.jd.com" target="_blank">高校合作</a></li>
+			<li>|</li>
+			<li><a href="//edu.jd.com/" target="_blank">校园特权</a></li>
+			<li>|</li>
+			<li><a href="//gongyi.jd.com/index/index_pwp_gy_0_0.html" target="_blank">京东公益</a></li>
+			<li>|</li>
+			<li><a href="//help.jd.com/index.html" target="_blank">客服中心</a></li>
+		</ul>
+		<span class="copyright">
+			Copyright © 2004-2015  京东JD.com 版权所有
+		</span>
+		<a href="//jdc.jd.com/" title="京东用户体验设计部" target="_blank" class="jdc-link"></a>
+	</div>
+</div>
+<script type="text/javascript">
+    var jaq = jaq || [];
+    jaq.push(['account', 'JA2016_113480']); //站点编号
+    jaq.push(['domain', 'campus.jd.com']);  //站点域名
+	jaq.push(['topic','_topic_']); //topic
+(function () {
+        var ja = document.createElement('script');
+        ja.type = 'text/javascript';
+        ja.async = true;
+        ja.src = ('https:' == document.location.protocol ? 'https://wlssl' : 'http://wl') + '.jd.com/joya.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ja, s);
+    })();
+</script>  
+<script src="js/jquery_2.js"></script>
+<script src="js/main_2.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript">
+$('.propaganda-tag .city').click(function() {
+  $('.city').removeClass('curr');
+  $(this).addClass('curr');
+});
+
+</script>
+  <!-- 其它按钮&点击切换 -->
+  <script type="text/javascript">
+    (function() {
+      var subtitle = $('.propaganda_subtit');
+      subtitle.on('click',function() {
+        $(this).addClass('nav-curr').parent().siblings().find(subtitle).removeClass('nav-curr');
+        var allCls = $(this).attr('class'),
+            clsName1 = allCls.indexOf('nav')==(allCls.lastIndexOf('nav'))?(allCls.substring(allCls.indexOf('nav'))):(allCls.substring(allCls.indexOf('nav'),allCls.lastIndexOf('nav'))),
+            clsName2 = clsName1.substring(clsName1.indexOf('-')+1);
+
+        var proCls = '.propaganda_'+clsName2;
+        $(proCls).show().siblings().hide();
+      })
+
+      var onList = false;
+      $('.other-tag')
+        .on('mouseenter', function() {
+          $('.other-tag, .other-lists').addClass('active')
+        })
+        .on('mouseleave', function() {
+          setTimeout(function() {
+            if (!onList)
+              $('.other-tag, .other-lists').removeClass('active')
+          })
+        })
+
+      $('.other-lists')
+        .on('mouseenter', function() {
+          $('.other-tag, .other-lists').addClass('active')
+          onList = true
+        })
+        .on('mouseleave', function() {
+          $('.other-tag, .other-lists').removeClass('active')
+          onList = false
+        })
+    })()
+  </script>
+    <script type="text/javascript">
+
+    function keydownEvent() {
+             
+             var e = window.event || arguments.callee.caller.arguments[0];
+
+             if (e && e.keyCode == 13 ) {
+    			 $('.propaganda-tag .city').removeClass('curr');
+            //     alert("您按回车键了");
+    			  $("#search").click();
+             }
+
+    }
+    </script>
+  </html>

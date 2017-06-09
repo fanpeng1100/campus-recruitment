@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>人才项目 - 京锐计划</title>
+	<link rel="stylesheet" href="css/base_4.css"/>
+	<link rel="stylesheet" href="css/jd-project_1.css"/>
+</head>
+<body>
+<!-- 通用顶栏 -->
+<script src="js/jquery_4.js"></script>
+<script src="js/footer_4.js"></script>
+
+<!-- 通用顶栏 -->
+<div class="header">
+    <div class="wrap">
+        <!-- logo -->
+        <a href="/"><div class="logo">京东校园招聘</div></a>
+
+        <!-- 登录栏 -->
+        <div class="login">
+            <!-- 登录栏 未登录状态 -->
+            <a onclick="login();"; href="javascript:;">登录</a>&nbsp;|&nbsp;<a title="注册后需要重新登录招聘系统 "  onclick="register();"; href="javascript:;">注册</a>
+
+        </div>
+
+        <!-- 导航 -->
+        <ul class="nav">
+            <!-- class有  nav-curr  则为当前选中 -->
+            <li><a href="index.html" id="a1" class="nav-link nav-curr" onclick="changeStyle(1)">首&nbsp;&nbsp;页</a></li>
+            <li><a href="position.html" id="a6" class="nav-link J-nav-sub">招聘职位</a></li>
+            <!--<li><a href="/web/static/forward?to=property-layout&t=5" id="a5" class="nav-link J-nav-sub">产业布局</a></li>-->
+
+            <li><a href="process.html" id="a4" class="nav-link" >招聘流程</a></li>
+            <!--  <li><a href="/web/message/announcement_index?t=7" id="a7" class="nav-link">消息公告</a></li>-->
+
+            <!--    <li>
+                 <a href="javascript:;" id="a3" class="nav-link J-nav-sub " >人才项目</a>
+                 <div class="nav-sub J-nav-sub-list">
+                     <a href="/web/static/forward?to=jd-run&t=3">京锐实习夏令营/JD RUN</a>
+                     <a href="/web/static/forward?to=tet&t=3" >管理培训生/TET</a>
+                     <a href="/web/static/forward?to=jd-imt&t=3">国际管培/IMT</a>
+                 </div>
+               </li>
+             -->
+            <li>
+                <a href="talents.html" id="a3" class="nav-link J-nav-sub " >人才项目</a>
+                <div class="nav-sub J-nav-sub-list" style="display: none;">
+                    <a href="">IMT 国际管培生</a>
+                    <a href="">TET 管理培训生</a>
+                    <a href="">TFS 区域未来之星</a>
+                    <a href="">JD RUN 京锐实习夏令营</a>
+                </div>
+            </li>
+
+            <li><a href="help.html" id="a9" class="nav-link">招聘帮助</a></li>
+            <li>
+                <a href="about.html" id="a2" class="nav-link J-nav-sub " >关于京东</a>
+                <div class="nav-sub J-nav-sub-list" style="display: none;">
+                    <a href="">京东介绍</a>
+                    <a href="">校招视频</a>
+                </div>
+            </li>
+            <!--
+            <li><a href="/web/static/forward?to=about-jd&t=2" id="a2" class="nav-link J-nav-sub">关于京东</a></li>
+            <li><a href="/web/static/forward?to=video_list&t=8" id="a8" class="nav-link J-nav-sub">校招视频</a></li>
+             -->
+            <!--
+      <li><a href="/web/static/forward?to=announcement&t=7" id="a7" class="nav-link">消息公告</a></li>
+      -->
+        </ul>
+
+    </div>
+
+    <!-- 分享栏 -->
+    <div class="share" style="z-index: 999">
+        <ul>
+            <li class="share-wechat">
+                <a href="javascript:;"></a>
+                <div class="share-info"><img src="picture/wechatqr_4.jpg" alt="" style="z-index: 999"></div>
+            </li>
+            <li class="share-weibo">
+				<a href="javascript:;"></a>
+                <div class="share-info"><img src="picture/weiboqr_4.png" alt="" style="z-index: 999;width: 103px;height: 103px;"></div>
+			</li>
+        </ul>
+    </div>
+</div>
+
+
+<script>
+try {
+	$(function(){
+	var i = "3";
+	   if(i!=""&&i!="null"){
+	     $("#a1").removeClass('nav-curr');
+		 $("#a"+i).addClass(' nav-curr'); 
+	   }
+
+//		$('.share-wechat').mouseover(
+//				function () {
+//                    $('.share .share-info').css("display","block");
+//                }
+//		);
+//        $('.share-wechat').mouseout(
+//                function () {
+//                    $('.share .share-info').css("display","none");
+//                }
+//        );
+	});
+
+
+} catch (e) {
+}
+ 
+</script>
+
+<!-- 京锐计划 -->
+<div class="wrap jd-run-wrap">
+  <h2 class="subtitle"><div class="subtitle-logo subtitle-logo-run"></div><span>JD RUN 京锐实习夏令营</span></h2>
+</div>
+<div class="jd-run-partial jdproj p-0">
+  <div class="wrap">
+    <div class="position-wrapper">
+      <div class="jdproj-banner">
+        <div class="jdproj-banner-pic"><img src="picture/jd-run-title_1.png"></div>
+        <div class="jdproj-banner-main">
+          <div class="jdproj-banner-main-mask">
+            <div class="valign_wrap">
+              <img src="picture/jd-run-logo-white_1.png">
+              <div class="title">About JD RUN Program</div>
+            </div>
+            <!--[if lt IE 8]><span></span><![endif]-->
+          </div>
+          <div class="jdproj-banner-main-info">
+            <div class="valign_wrap">京锐实习夏令营——JD RUN（Real Experience;Unlimited Challenges；Non-stop Support）京诚邀海内外顶尖学府的优秀本科生,硕士、博士及MBA在读生加入，我们将为大家提供在京东总部进行为期8周（每年7月-8月）的暑期实习平台，让更多优秀的学子有机会体验京东的核心业务、了解京东的价值主张，同时在实习期内安排丰富的业余活动及分享，让大家在体验业务了解工作之余，进一步的将生活、兴趣与工作完美的结合，在一个真实的商业情境下学习实践，也为京东集团的未来发展储备一批精锐之师！接下来，京东会为优秀的你提供京东集团全职人才项目（TET/IMT）的绿色通道。如果你足够优秀，你将优于其他人提前拿到京东的全职工作offer！</div>
+            <!--[if lt IE 8]><span></span><![endif]-->
+          </div>
+        </div>
+      </div>
+
+      <div class="jdproj-littletit">项目特色</div>
+
+      <div class="about-group">
+            <div class="about-group-item">
+              <div class="about-group-item-wrap">
+                <div class="about-group-item-cover">
+                  <div class="valign_wrap"><div class="about-group-item-wrap-icon1"></div>多元的角色体验</div>
+                  <!--[if lt IE 8]><span></span><![endif]-->
+                </div>
+                <div class="about-group-item-detail">
+                  <p><font size="2.4em"><strong>在不同的岗位成长，跨越部门，突破自我！</strong></font></p>
+                  <p>1. 京东集团营销、物流、研发、金融、职能等五大不同模块的工作岗位向JD RUN营员全面开放，入选项目后根据营员的个人意愿和岗位需求双向匹配，给你开放自由的选择权。</p>
+                  <p>2. 营员将有机会接触京东核心业务工作，并有业务精英亲自帮带，零距离了解电子商务和互联网行业，让你在这个暑假华丽转身。</p>
+                  <p>3. 京东的极速配送一直为大家津津乐道，项目营员将有机会亲身参与京东配送站工作，了解极速配送背后的运营逻辑。</p>
+                </div>
+              </div>
+            </div>
+            <div class="about-group-item">
+              <div class="about-group-item-wrap">
+                <div class="about-group-item-cover">
+                  <div class="valign_wrap"><div class="about-group-item-wrap-icon2"></div>刺激的挑战联盟</div>
+                  <!--[if lt IE 8]><span></span><![endif]-->
+                </div>
+                <div class="about-group-item-detail">
+                  <p><font size="2.4em"><strong>参与团队挑战，多元协作，思维碰撞！</strong></font></p>
+                  <p>1．项目招募面向海内外著名高等学府，学历涵盖本科、硕士、博士和MBA，多元化的群体能够给营员提供一个多元化的思维碰撞的平台。</p>
+                  <p>2．营员正式入选项目团队并完成统一培训后，将内部组队参加基于用户体验的项目挑战，培养商业嗅觉、锤炼合作能力。挑战赛将由京东高管担任评审，优胜队将有机会赢得工作机会与项目大奖双重激励。</p>
+                </div>
+              </div>
+            </div>
+            <div class="about-group-item">
+              <div class="about-group-item-wrap">
+                <div class="about-group-item-cover">
+                  <div class="valign_wrap"><div class="about-group-item-wrap-icon3"></div>专属的坚实后盾</div>
+                  <!--[if lt IE 8]><span></span><![endif]-->
+                </div>
+                <div class="about-group-item-detail">
+                  <p><font size="2.4em"><strong>专属培养计划，保驾护航，助力梦想！</strong></font></p>
+                  <p>1．JD RUN项目为全部营员提供JD TALK-业界大牛案例分享、高管交流会等系列优质培训课程与活动，助力营员赢在职场起跑线。</p>
+                  <p>2．营员将有机会与京东管理培训生TET项目成员以及京东国际人才IMT项目成员进行经验交流，进一步了解职场前辈们的职业选择和奋斗经历。</p>
+                  <p>3．你会得到职业发展管理团队的跟踪评估和领导力,商业直觉和合作技巧方面的专业训练。京东集团的高管和技术专家将与你并肩工作并提供及时指导，定期评估和反馈，加速成长。</p>
+                  <p>4．项目为全部营员安排全程住宿，并提供具有行业竞争力的实习薪酬、午餐和晚餐补贴、商业保险，营员实习期间享受正式员工的内购福利。</p>
+                  <p>5．实习期表现优异且对京东有强烈兴趣的同学，项目组将综合营员个人意愿和学历背景推荐给京东不同的人才项目或工作岗位，包括京东管理培训生TET项目和京东国际人才IMT项目，让大家有机会在毕业季前斩获京东的offer，成为京东人才池中的一员。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="jdproj-littletit">岗位要求</div>
+
+          <div class="jdproj-recommend">
+            <div class="jdproj-recommend-item firstly">
+              <div class="jdproj-recommend-item-icon"></div>
+              <div class="job-recommend-item-info">2018年及以后毕业的本科、硕士、博士和MBA在读生（不限专业）</div>
+            </div>
+            <div class="jdproj-recommend-item secondly">
+              <div class="jdproj-recommend-item-icon"></div>
+              <div class="job-recommend-item-info">热爱电商和互联网行业，有强烈的进取心和积极开放的心态，乐于接受挑战</div>
+            </div>
+            <div class="jdproj-recommend-item thirdly">
+              <div class="jdproj-recommend-item-icon"></div>
+              <div class="job-recommend-item-info"><center>具备适应不同的文化和多元化的工作环境的能力</center></div>
+            </div>
+            <div class="jdproj-recommend-item forthly">
+              <div class="jdproj-recommend-item-icon"></div>
+              <div class="job-recommend-item-info"><center>具备出色的英语沟通和写作能力及独立思考解决复杂问题的能力</center></div>
+            </div>
+            <div class="jdproj-recommend-item fifthly">
+              <div class="jdproj-recommend-item-icon2"></div>
+              <div class="job-recommend-item-info"><center>强烈的责任意识、优秀的沟通能力和团队合作精神</center></div>
+            </div>
+          </div>
+
+          <div class="jdproj-littletit" style="margin-top: 60px;">招聘流程</div>
+
+          <div class="jdproj-process">
+            <div class="jdproj-process-item">
+              <div class="jdproj-process-item-body">
+                <!-- 有多少步，作除法运算得到 width，注意取少不取多 -->
+                <div class="jdproj-process-item-body-step" style="width: 33.3%;">
+                  <div class="jdproj-process-item-body-step-wrap">
+                    <div>简历接收</div><div>截止至3月31日</div>
+                  </div>
+                </div>
+                <div class="jdproj-process-item-body-step" style="width: 33.3%;">
+                  <div class="jdproj-process-item-body-step-wrap">
+                    <div>简历筛选——初试——在线测评——终试</div>
+                  </div>
+                </div>
+                <div class="jdproj-process-item-body-step" style="width: 33.3%;">
+                  <div class="jdproj-process-item-body-step-wrap">
+                    <div>项目时间</div><div>次年7~8月</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--<div class="jdproj-littletit">活动和培训日历</div>-->
+
+          <img class="jdproj-capture" src="picture/jd-run-calendar-new_1.jpg" style="margin-bottom: 92px;">
+
+      <div class="jdproj-members">
+        <div class="jdproj-members-list">
+          <!-- 如果大图在左就非常好对应顺序 -->
+          <!-- 现在大图在右，右浮动，顺序上需要格外注意，照片排列顺序是 右到左，上到下 -->
+          <!-- 大图 -->
+          <div class="jdproj-members-list-item" style="width: 400px; height: 400px;">
+            <img src="picture/xiaoyao-400400_1.jpg">
+            <div class="jdproj-members-list-item-mask"></div>
+          </div>
+          <div class="jdproj-members-list-item">
+            <img src="picture/jiangchongwei_1.jpg">
+            <div class="jdproj-members-list-item-mask"></div>
+          </div>
+          <div class="jdproj-members-list-item">
+            <img src="picture/luoqian_1.jpg">
+            <div class="jdproj-members-list-item-mask"></div>
+          </div>
+          <div class="jdproj-members-list-item">
+            <img src="picture/qingxiaoying_1.jpg">
+            <div class="jdproj-members-list-item-mask"></div>
+          </div>
+          <div class="jdproj-members-list-item">
+            <img src="picture/wangjing_1.jpg">
+            <div class="jdproj-members-list-item-mask"></div>
+          </div>
+          <div class="jdproj-members-list-item">
+            <img src="picture/wangrunmo_1.jpg">
+            <div class="jdproj-members-list-item-mask"></div>
+          </div>
+        </div>
+        <div class="jdproj-members-info">
+          <div class="jdproj-members-info-logo">
+            <div class="valign_wrap">
+              <img src="picture/jd-run-logo-white_1.png">
+              <div class="title">京锐营员风采</div>
+            </div>
+            <!--[if lt IE 8]><span></span><![endif]-->
+          </div>
+          <div class="jdproj-members-info-item">
+            <div class="jdproj-members-info-item-title">肖瑶 哈佛大学商学院 MBA</div>
+            <div class="jdproj-members-info-item-desc">京东一直处在互联网行业的风口浪尖，让人感到它卯足了劲使劲向前追赶，是一家充满激情和活力的公司，这正是我喜欢的工作节奏。同时，京东在各方面又都和我之前的工作经验非常不一样，包括业务形态、发展阶段、公司文化等等，对我来说是一个非常好的学习新事物的选择。<br>JD RUN是一个进过精心设计、投入了很多资源来支持的项目，作为学员我能切身感受项目组希望为我们提供尽可能多的、不一样的学习机会。在两个月左右的时间里，有各业务部门副总裁、总监级别的高管来给我们作介绍交流，有前辈管培生分享工作心得。既有固定岗位的日常工作，又可以组队完成其他感兴趣部门的创新项目。可以参加京东大学的各种业余课程，也有去配送一线了解京东核心竞争优势的机会。感觉只要你希望学习更多，JD RUN都会为你创造条件来实现。</div>
+          </div>
+          <div class="jdproj-members-info-item">
+            <div class="jdproj-members-info-item-title">姜崇伟 哥伦比亚大学商学院 MBA</div>
+            <div class="jdproj-members-info-item-desc">京东是中国互联网行业中的领先企业，并且涉及很多新鲜的朝阳行业，对于出自传统咨询背景的我来说是一个很好的学习机会。能够深刻感觉京东客户为先、激情、创新等企业的核心价值观，公司在尝试各种新业务的过程中能够放权给年轻人，敢拼敢做。</div>
+          </div>
+          <div class="jdproj-members-info-item">
+            <div class="jdproj-members-info-item-title">罗茜 UCLA商学院 MBA</div>
+            <div class="jdproj-members-info-item-desc">在国外学习和工作的这8年，即使远隔千里，我常常会感受到国内互联网行业的飞速发展和中国本土企业未来无限的发展空间。而在这股洪流之中，我觉得京东是为数不多的在高速增长的情况，还能坚持贯彻以“客户为先”为核心价值观的企业。加入京东，我希望更加深入的去了解它，感受在这个企业文化的大伞下，不断前进和奋斗的激情。JD Run给每个学员安排了非常丰富和充实暑期实习生活，对我不仅仅是一次事业上的探索，也是一次视野上的拓展。很感谢为JD Run这个项目忙前忙后的工作人员，我在这个项目里，收获的不仅仅是更加深入的了解我所选择的实习业务--国际供应链和精准营销，我也结交了来自五湖四海的朋友们，有幸与公司各部门的高层领导进行深入的交流，还将会去配送中心体验渗入到基层的京东价值观。正如JD RUN的中文名：京锐实习夏令营，这是一次集有趣，有内容和有体验为一体的实习项目。</div>
+          </div>
+          <div class="jdproj-members-info-item">
+            <div class="jdproj-members-info-item-title">卿小滢 密歇根大学 Master</div>
+            <div class="jdproj-members-info-item-desc">作为一名供应链专业学生，一直期待可以揭开“亚洲一号”神秘的面纱。十分有幸可以通过JD RUN深入亚洲一号项目部，接触亚洲一号的方案规划，设备选型，实施运营等核心业务。实习过程中，不仅有充实的部门工作，还有业界大牛的分享交流会、丰富的团建活动和可以碰撞出思想火花的项目竞赛。和志同道合的小伙伴一起分享，体验，学习，奋斗，回味无穷。</div>
+          </div>
+          <div class="jdproj-members-info-item">
+            <div class="jdproj-members-info-item-title">王晶 斯坦福大学 Master</div>
+            <div class="jdproj-members-info-item-desc">首先，京东是个高速发展的企业，在最新的《财富》全球500强排行榜中，京东成为中国首家，唯一入选的互联网企业。而且，我也了解到京东对人的培养体制非常健全，能够给予年轻人更多的机会。同时，JD RUN项目给予我们更多的机会去接触了解京东，了解互联网企业。<br>就像京东的slogan一样，让生活变得简单快乐。我在京东工作的这段时间深切体会到了京东的工作氛围。同事之间，上下级之间的关系就是简单快乐的。我能够很快地融入同事的集体中，有同事们的帮助下，我逐渐熟悉业务，能够体现自己的价值。JD RUN项目的安排让我们更加深入地了解京东，全方面地向我们展示京东的多面。</div>
+          </div>
+          <div class="jdproj-members-info-item">
+            <div class="jdproj-members-info-item-title">王韵墨 哈佛大学 Master</div>
+            <div class="jdproj-members-info-item-desc">互联网是中国这几年来发展最飞速的行业，而互联网平台也已经成为贸易、金融、文化等各个领域不可或缺的载体。我觉得如果想理解中国的经济发展和最尖端的行业业态，就一定要来互联网公司体验。京东不仅是中国互联网公司中的佼佼者，京锐夏令营更是同类实习机会中最全面，最深入的。通过轮岗、项目、讲座、甚至一线配送体验等丰富多元的模式，京锐实习生在短短的两个月内可以体验到京东各个层面的业务。<br>入职以后，我加入了京东商城的全球购业务部门。通过在部门内的轮岗，我体验了从招商、采购到供应链、营销等全面的运作流程，并深度学习了跨境电商的业务模式。在工作时间之余，我选择参与了京锐实习安排的京东金融股权众筹项目。这次难得的机会让我成为项目组的一员，与经验丰富的同事们一起探索谋划互联网金融业务的创新点。<br>京锐实习生项目聚集了在海内外名校的优秀学员，也受到公司同事充分的重视和帮助，为大家提供了一次充实、难忘的学习体验。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="jdproj-join">
+        <div class="valign_wrap">
+          <div class="jdproj-join-title">Jumpstart Start Your Dream</div>
+          <a href="#" class="jdproj-join-btn">立即申请</a>
+        </div>
+        [if lt IE 8]>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+
+<!-- footer -->
+<div class="footer">
+	<div class="wrap">
+		<ul class="friend-link">
+			<li><a href="//www.jd.com" target="_blank">京东(JD.COM)</a></li>
+			<li>|</li>
+			<li><a href="//zhaopin.jd.com" target="_blank">京东招聘</a></li>
+			<li>|</li>
+			<li><a href="//xiaoyuan.jd.com" target="_blank">高校合作</a></li>
+			<li>|</li>
+			<li><a href="//edu.jd.com/" target="_blank">校园特权</a></li>
+			<li>|</li>
+			<li><a href="//gongyi.jd.com/index/index_pwp_gy_0_0.html" target="_blank">京东公益</a></li>
+			<li>|</li>
+			<li><a href="//help.jd.com/index.html" target="_blank">客服中心</a></li>
+		</ul>
+		<span class="copyright">
+			Copyright © 2004-2015  京东JD.com 版权所有
+		</span>
+		<a href="//jdc.jd.com/" title="京东用户体验设计部" target="_blank" class="jdc-link"></a>
+	</div>
+</div>
+<script type="text/javascript">
+    var jaq = jaq || [];
+    jaq.push(['account', 'JA2016_113480']); //站点编号
+    jaq.push(['domain', 'campus.jd.com']);  //站点域名
+	jaq.push(['topic','_topic_']); //topic
+(function () {
+        var ja = document.createElement('script');
+        ja.type = 'text/javascript';
+        ja.async = true;
+        ja.src = ('https:' == document.location.protocol ? 'https://wlssl' : 'http://wl') + '.jd.com/joya.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ja, s);
+    })();
+</script><script src="js/jquery_4.js"></script>
+<script src="js/main_4.js"></script>
+<script type="text/javascript" src="js/applyment_result_1.js"></script>
+<script>
+var isMembersHoverLock = false;
+$('.jdproj-members-list-item').on('mouseenter', function() {
+	var index = $(this).index();
+	var descs = $(this).parents('.jdproj-members').find('.jdproj-members-info-item');
+	descs.eq(index).addClass('active');
+}).on('mouseleave', function() {+-
+	$('.jdproj-members-info-item').removeClass('active');
+});
+</script>
+
+</body>
+</html>

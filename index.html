@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <title>京东校园招聘首页</title>
+	<link rel="stylesheet" href="css/base_5.css"/>
+	<link rel="stylesheet" href="css/flexslider_1.css" type="text/css"/>
+	<link rel="stylesheet" href="css/home_1.css"/>
+</head>
+<body>
+<script>
+	var phaseStateShow = eval({"20":"HR面试","10":"初试","1":"初筛","5":"笔试","15":"复试","25":"面试完成","100":"内推","50":"协议实习"});
+</script>
+
+<!-- 通用顶栏 -->
+<script src="js/jquery_5.js"></script>
+<script src="js/footer_5.js"></script>
+
+<!-- 通用顶栏 -->
+<div class="header">
+	<div class="wrap">
+		<!-- logo -->
+		<a href="/"><div class="logo">京东校园招聘</div></a>
+
+	<!-- 登录栏 -->
+		<div class="login">
+			<!-- 登录栏 未登录状态 -->
+						<a onclick="login();"; href="javascript:;">登录</a>&nbsp;|&nbsp;<a title="注册后需要重新登录招聘系统 "  onclick="register();"; href="javascript:;">注册</a>
+
+					</div>
+
+    <!-- 导航 -->
+    <ul class="nav">
+      <!-- class有  nav-curr  则为当前选中 -->
+      <li><a href="index.html" id="a1" class="nav-link nav-curr" onclick="changeStyle(1)">首&nbsp;&nbsp;页</a></li>
+      <li><a href="position.html" id="a6" class="nav-link J-nav-sub">招聘职位</a></li>
+      <!--<li><a href="/web/static/forward?to=property-layout&t=5" id="a5" class="nav-link J-nav-sub">产业布局</a></li>-->
+		  
+      <li><a href="process.html" id="a4" class="nav-link" >招聘流程</a></li>
+    <!--  <li><a href="/web/message/announcement_index?t=7" id="a7" class="nav-link">消息公告</a></li>-->
+    
+   <!--    <li>
+		<a href="javascript:;" id="a3" class="nav-link J-nav-sub " >人才项目</a>
+		<div class="nav-sub J-nav-sub-list">
+			<a href="/web/static/forward?to=jd-run&t=3">京锐实习夏令营/JD RUN</a>
+			<a href="/web/static/forward?to=tet&t=3" >管理培训生/TET</a>
+			<a href="/web/static/forward?to=jd-imt&t=3">国际管培/IMT</a>
+		</div>
+	  </li>
+	-->  
+	   <li>
+		<a href="talents.html" id="a3" class="nav-link J-nav-sub " >人才项目</a>
+		<div class="nav-sub J-nav-sub-list" style="display: none;">
+			<a href="">IMT 国际管培生</a>
+			<a href="">TET 管理培训生</a>
+			<a href="">TFS 区域未来之星</a>
+			<a href="">JD RUN 京锐实习夏令营</a>
+		</div>
+	  </li>
+
+	<li><a href="help.html" id="a9" class="nav-link">招聘帮助</a></li>
+     <li>
+      <a href="about.html" id="a2" class="nav-link J-nav-sub " >关于京东</a>
+      <div class="nav-sub J-nav-sub-list" style="display: none;">
+			<a href="">京东介绍</a>
+			<a href="">校招视频</a>
+	 </div>
+     </li>
+    <!--
+    <li><a href="/web/static/forward?to=about-jd&t=2" id="a2" class="nav-link J-nav-sub">关于京东</a></li>
+    <li><a href="/web/static/forward?to=video_list&t=8" id="a8" class="nav-link J-nav-sub">校招视频</a></li>
+     --> 
+            <!--
+      <li><a href="/web/static/forward?to=announcement&t=7" id="a7" class="nav-link">消息公告</a></li>
+      -->
+    </ul>
+
+	</div>
+
+    <!-- 分享栏 -->
+    <div class="share" style="z-index: 999">
+        <ul>
+            <li class="share-wechat">
+                <a href="javascript:;"></a>
+                <div class="share-info"><img src="picture/wechatqr_5.jpg" alt="" style="z-index: 999"></div>
+            </li>
+            <li class="share-weibo">
+				<a href="javascript:;"></a>
+                <div class="share-info"><img src="picture/weiboqr_5.png" alt="" style="z-index: 999;width: 103px;height: 103px;"></div>
+			</li>
+        </ul>
+    </div>
+</div>
+
+
+<script>
+try {
+	$(function(){
+	var i = "";
+	   if(i!=""&&i!="null"){
+	     $("#a1").removeClass('nav-curr');
+		 $("#a"+i).addClass(' nav-curr'); 
+	   }
+
+//		$('.share-wechat').mouseover(
+//				function () {
+//                    $('.share .share-info').css("display","block");
+//                }
+//		);
+//        $('.share-wechat').mouseout(
+//                function () {
+//                    $('.share .share-info').css("display","none");
+//                }
+//        );
+	});
+
+
+} catch (e) {
+}
+ 
+</script>
+
+<!-- 主体内容 -->
+<div id="J-index-wrap" class="index-wrap animation">
+	<div class="main-burn"><!--
+		<video id="burn-video" autoplay="" loop="">
+			<source src="/campusnew/video/intro_converted_3rd.mp4" type="video/mp4">
+			
+				<div class="J-main-texts">
+					<div class="J-main-title">京东2016校园招聘</div>
+    				<div class="J-main-d-flame">
+    					<span class="f">F</span>
+    					<span class="l">L</span>
+    					<span class="a">A</span>
+    					<span class="m">M</span>
+    					<span class="e">E</span>
+    				</div>
+					<div class="J-main-d-l">不如</div>
+					<div class="J-main-d-r">纵情燃烧</div>
+    				<div class="J-main-d-b">
+    					
+    				</div>
+				</div>
+		</video>-->
+		<div class="flexslider"> 
+			<ul class="slides"> 
+			<!-- 
+				轮播顺序
+				<li class="flexslider_item"><a class="flexslider_item_anchor" href="#" target="_blank"><img src="picture/test.png"></a></li>NO.2
+				<li class="flexslider_item"><a class="flexslider_item_anchor" href="#" target="_blank"><img src="picture/test.png"></a></li>NO.3
+				<li class="flexslider_item"><a class="flexslider_item_anchor" href="#" target="_blank"><img src="picture/test.png"></a></li>NO.4
+				<li class="flexslider_item"><a class="flexslider_item_anchor" href="#" target="_blank"><img src="picture/test.png"></a></li>NO.1
+			-->
+										        <li class="flexslider_item"><a class="flexslider_item_anchor" href="//campus.jd.com/web/static/forward?to=video_list&t=8" target="_blank"><img src="picture/58d255c8n0c5765c3_1.png"/></a></li>
+			    			        <li class="flexslider_item"><a class="flexslider_item_anchor" href="//jdata.datafountain.cn/" target="_blank"><img src="picture/58d256a3n6643b028_1.png"/></a></li>
+			    			        <li class="flexslider_item"><a class="flexslider_item_anchor" href="//campus.jd.com/web/job/job_index?t=6" target="_blank"><img src="picture/58d2556dn326a191a_1.jpg"/></a></li>
+			    			        <li class="flexslider_item"><a class="flexslider_item_anchor" href="//campus.jd.com/web/job/job_index?t=6&dicCode=jfx09001&dicName=%E6%B5%B7%E5%A4%96%E6%8A%80%E6%9C%AF%E6%8B%9B%E8%81%98" target="_blank"><img src="picture/58df40afn98dc2376_1.png"/></a></li>
+			    						</ul>
+		</div>
+	</div>
+        		<!--
+        	<div class="wrap">
+        		<div class="main-burn-nav">
+        			<a href="/web/static/forward?to=about-jd&t=2">
+        			关于京东
+        			</a>
+        			<a href="/web/static/forward?to=property-layout&t=5">
+        			产业布局
+        			</a>
+        			<a href="/web/static/forward?to=jd-run&t=3">
+        			人才项目
+        			</a>
+        			<a href="/web/job/job_index?t=6">
+        			招聘职位
+        			</a>
+        		</div>
+        	</div>
+        	<div id="home_qrcode">
+        		<img src="picture/home_qrcode_1.png">
+        		<div class="home_qr_text">校园招聘公众号</div>
+        	</div>
+        	-->
+				
+	<div class="wrap">
+		<div class="main-burn-content">
+			<div class="index_cont">
+				<!-- S 申请状态 -->
+                        	<div class="applystatus" style="display:none" >
+            					<h3 class="applystatus_title">申请状态</h3>
+				<input type="hidden" id="jobObjFlag" value="false" />
+									<a href="/web/resume/resume_index" class="index_cont_btn applystatus_myresume">我的简历</a>
+				</div>
+				<!-- E 申请状态 -->
+				
+				<!-- S 职位清单 -->
+				<!-- postlist_sub+.postlist_x* [ proj | tech | op | ux | market | pm | fn ]  -->
+		        	<div class="postlist" style="display:block" >
+        					<div class="postlist_cont">
+						<div class="postlist_item">
+							<div class="postlist_sub postlist_xproj">
+								<div class="postlist_sub_valign">
+									<div class="valign_wrap">
+										<div class="postlist_sub_icon"></div>
+										<div class="postlist_sub_name">人才项目</div>
+									</div>
+									<!--[if lt IE 8]><span></span><![endif]-->
+								</div>
+								<ul class="postlist_sub_wrap">
+									<!--
+    									href="/web/static/forward?to=jd-project-imt&t=3"
+    									href="/web/static/forward?to=jd-project-tet&t=3"
+    									href="/web/static/forward?to=jd-project-tfs&t=3"
+    									href="/web/static/forward?to=jd-project-run&t=3"	
+									-->
+									<li class="postlist_sub_item"><a onclick="doJobIndex('jfx09001','海外技术招聘')" href="#">海外技术招聘</a></li>
+									<li class="postlist_sub_item"><a onclick="doJobIndex('jfx08001','管理培训生')" href="#">TET管培生</a></li>
+									<li class="postlist_sub_item"><a onclick="doJobIndex('jfx10001','区域未来之星')" href="#">TFS区域未来之星</a></li>
+									<li class="postlist_sub_item"><a onclick="doJobIndex('jfx07001','京锐计划类')" href="#">JD RUN京锐暑期夏令营</a></li>
+									
+								</ul>
+							</div>
+						</div>
+						<div class="postlist_item">
+							<div class="postlist_sub postlist_xtech">
+								<div class="postlist_sub_valign">
+									<div class="valign_wrap">
+										<div class="postlist_sub_icon"></div>
+										<div class="postlist_sub_name">技术方向</div>
+									</div>
+									<!--[if lt IE 8]><span></span><![endif]-->
+								</div>
+								<ul class="postlist_sub_wrap">
+																			<li class="postlist_sub_item"><a onclick="doJobIndex('jfx04001','软件开发类')" href="#">软件开发类</a></li>
+																			<li class="postlist_sub_item"><a onclick="doJobIndex('jfx04002','数据与算法类')" href="#">数据与算法类</a></li>
+																			<li class="postlist_sub_item"><a onclick="doJobIndex('jfx04003','安全技术类')" href="#">安全技术类</a></li>
+																			<li class="postlist_sub_item"><a onclick="doJobIndex('jfx04004','测试类')" href="#">测试类</a></li>
+																			<li class="postlist_sub_item"><a onclick="doJobIndex('jfx04005','技术支持类')" href="#">技术支持类</a></li>
+																			<li class="postlist_sub_item"><a onclick="doJobIndex('jfx04006','硬件开发类')" href="#">硬件开发类</a></li>
+																	</ul>
+							</div>
+							<div class="postlist_sub postlist_xop">
+								<div class="postlist_sub_valign">
+									<div class="valign_wrap">
+										<div class="postlist_sub_icon"></div>
+										<div class="postlist_sub_name">供应链方向</div>
+									</div>
+									<!--[if lt IE 8]><span></span><![endif]-->
+								</div>
+								<ul class="postlist_sub_wrap">
+																			<li class="postlist_sub_item"><a onclick="doJobIndex('jfx02001','供应链管理类')" href="#">供应链管理类</a></li>
+																			<li class="postlist_sub_item"><a onclick="doJobIndex('jfx02002','客户服务类')" href="#">客户服务类</a></li>
+																	</ul>
+							</div>
+						</div>
+						<div class="postlist_item">
+							<div class="postlist_sub postlist_xux">
+								<div class="postlist_sub_valign">
+									<div class="valign_wrap">
+										<div class="postlist_sub_icon"></div>
+										<div class="postlist_sub_name">设计方向</div>
+									</div>
+									<!--[if lt IE 8]><span></span><![endif]-->
+								</div>
+								<ul class="postlist_sub_wrap">
+																			<li class="postlist_sub_item"><a onclick="doJobIndex('jfx05001','设计类')" href="#">设计类</a></li>
+																	</ul>
+							</div>
+							<div class="postlist_sub postlist_xmarket">
+								<div class="postlist_sub_valign">
+									<div class="valign_wrap">
+										<div class="postlist_sub_icon"></div>
+										<div class="postlist_sub_name">金融方向</div>
+									</div>
+									<!--[if lt IE 8]><span></span><![endif]-->
+								</div>
+								<ul class="postlist_sub_wrap">
+																			<li class="postlist_sub_item"><a onclick="doJobIndex('jfx11001','金融市场类')" href="#">金融市场类</a></li>
+																			<li class="postlist_sub_item"><a onclick="doJobIndex('jfx11002','金融风控类')" href="#">金融风控类</a></li>
+																			<li class="postlist_sub_item"><a onclick="doJobIndex('jfx11003','金融产品类')" href="#">金融产品类</a></li>
+																	</ul>
+							</div>
+						</div>
+						<div class="postlist_item">
+							<div class="postlist_sub postlist_xpm">
+								<div class="postlist_sub_valign">
+									<div class="valign_wrap">
+										<div class="postlist_sub_icon"></div>
+										<div class="postlist_sub_name">产品方向</div>
+									</div>
+									<!--[if lt IE 8]><span></span><![endif]-->
+								</div>
+								<ul class="postlist_sub_wrap">
+																			<li class="postlist_sub_item"><a onclick="doJobIndex('jfx06001','产品策划类')" href="#">产品策划类</a></li>
+																			<li class="postlist_sub_item"><a onclick="doJobIndex('jfx06002','项目类')" href="#">项目类</a></li>
+																			<li class="postlist_sub_item"><a onclick="doJobIndex('jfx06003','产品运营类')" href="#">产品运营类</a></li>
+																	</ul>
+							</div>
+							<div class="postlist_sub postlist_xfn">
+								<div class="postlist_sub_valign">
+									<div class="valign_wrap">
+										<div class="postlist_sub_icon"></div>
+										<div class="postlist_sub_name">市场与职能方向</div>
+									</div>
+									<!--[if lt IE 8]><span></span><![endif]-->
+								</div>
+								<ul class="postlist_sub_wrap">
+																			<li class="postlist_sub_item" style="height:25px;line-height: 15px"><a onclick="doJobIndex('jfx01001','法务风控类')" href="#">法务风控类</a></li>
+																			<li class="postlist_sub_item" style="height:25px;line-height: 15px"><a onclick="doJobIndex('jfx01002','财务类')" href="#">财务类</a></li>
+																			<li class="postlist_sub_item" style="height:25px;line-height: 15px"><a onclick="doJobIndex('jfx01003','人力资源类')" href="#">人力资源类</a></li>
+																			<li class="postlist_sub_item" style="height:25px;line-height: 15px"><a onclick="doJobIndex('jfx01004','行政类')" href="#">行政类</a></li>
+																			<li class="postlist_sub_item" style="height:25px;line-height: 15px"><a onclick="doJobIndex('jfx01005','战略合作类')" href="#">战略合作类</a></li>
+																			<li class="postlist_sub_item" style="height:25px;line-height: 15px"><a onclick="doJobIndex('jfx01006','采购销售类')" href="#">采购销售类</a></li>
+																			<li class="postlist_sub_item" style="height:25px;line-height: 15px"><a onclick="doJobIndex('jfx01007','营销类')" href="#">营销类</a></li>
+																			<li class="postlist_sub_item" style="height:25px;line-height: 15px"><a onclick="doJobIndex('jfx01008','公关类')" href="#">公关类</a></li>
+																	</ul>
+							</div>
+						</div>
+					</div>
+					<a href="/web/job/job_index?t=6" class="index_cont_btn postlist_sendresume">投递简历</a>
+				</div>
+				<!-- E 职位清单 -->
+
+			</div>
+		</div>
+		<!-- <div class="main-burn-nav">
+			<a href="about-jd.html">
+			关于京东
+			</a>
+			<a href="property-layout.html">
+			产业布局
+			</a>
+			<a href="jd-run.html">
+			人才项目
+			</a>
+			<a href="job-recruit.html">
+			招聘职位
+			</a>
+		</div> -->
+	</div>
+				
+				
+				
+	</div>
+	
+
+<!-- footer -->
+<div class="footer">
+	<div class="wrap">
+		<ul class="friend-link">
+			<li><a href="//www.jd.com" target="_blank">京东(JD.COM)</a></li>
+			<li>|</li>
+			<li><a href="//zhaopin.jd.com" target="_blank">京东招聘</a></li>
+			<li>|</li>
+			<li><a href="//xiaoyuan.jd.com" target="_blank">高校合作</a></li>
+			<li>|</li>
+			<li><a href="//edu.jd.com/" target="_blank">校园特权</a></li>
+			<li>|</li>
+			<li><a href="//gongyi.jd.com/index/index_pwp_gy_0_0.html" target="_blank">京东公益</a></li>
+			<li>|</li>
+			<li><a href="//help.jd.com/index.html" target="_blank">客服中心</a></li>
+		</ul>
+		<span class="copyright">
+			Copyright © 2004-2015  京东JD.com 版权所有
+		</span>
+		<a href="//jdc.jd.com/" title="京东用户体验设计部" target="_blank" class="jdc-link"></a>
+	</div>
+</div>
+<script type="text/javascript">
+    var jaq = jaq || [];
+    jaq.push(['account', 'JA2016_113480']); //站点编号
+    jaq.push(['domain', 'campus.jd.com']);  //站点域名
+	jaq.push(['topic','_topic_']); //topic
+(function () {
+        var ja = document.createElement('script');
+        ja.type = 'text/javascript';
+        ja.async = true;
+        ja.src = ('https:' == document.location.protocol ? 'https://wlssl' : 'http://wl') + '.jd.com/joya.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ja, s);
+    })();
+</script><script src="js/jquery_5.js"></script>
+<script src="js/jquery.flexslider-min_1.js"></script>
+<script src="js/main_5.js"></script>
+<script src="js/footer_5.js"></script>
+<script src="js/home_1.js"></script>
+
+<script>
+// FOR TEST
+$('#test1').on('click', function() {
+	$('.applystatus').toggle();
+	$('.postlist').toggle();
+})
+</script>
+
+<!-- 2015-08-10 纵情燃烧 JS -->
+<script type="text/javascript">
+	var $a = $('.burn-nav-main').children()
+
+	$a
+		.on('mouseenter', function() {
+			$(this)
+				.addClass('hovered')
+				.css({'padding-top': 80, 'opacity': 0})
+				.stop().animate({'padding-top': 0, 'opacity': 1}, 300)
+		})
+		.on('mouseleave', function() {
+			$(this).removeClass('hovered')
+		})
+</script>
+
+<script>
+function autoHeight () {
+	var windowH = $(window).height()
+	var bodyH = $('body').height()
+
+	if (windowH > bodyH) {
+		$('.index-footer').css({position: 'absolute'})
+	} else {
+		$('.index-footer').css({position: 'relative'})
+	}
+	// qrcode
+	var bodyW = $('body').width()
+	$('#home_qrcode').css({
+		left: (bodyW - 1000) / 2 + 1000,
+		display: 'block'
+	})
+}
+
+$(window).resize(function() {
+	autoHeight()	
+})
+autoHeight()
+
+$(function() {
+	$(".flexslider").flexslider({
+		animation: 'slide',
+		// initDelay: 0,
+		slideshowSpeed: 5000,
+		// animationSpeed: 600,
+		pauseOnHover: false,
+		touch: false,
+		directionNav: false,
+		controlNav: true
+	});
+});
+
+// function homeAutoHeight() {
+// 	// var eleMainWrap = $("#J-index-wrap");
+// 	// var eleMainBtn = $("#J-main-nav");
+// 	var windowH = $(window).height();
+// 	var mainH = windowH - $(".header").height() - 2 - $(".index-footer").height();
+// 	console.log(mainH);
+// 	if (windowH > 984) {
+// 		// eleMainWrap.height(mainH);
+// 		// eleMainBtn.css({
+// 		// 	"bottom": 200,
+// 		// 	"top": "inherit"
+// 		// });
+// 		$('#burn-video').height(984)
+// 	} else {
+// 		$('#burn-video').height('auto')
+// 		// eleMainBtn.css({
+// 		// 	"top": 700,
+// 		// 	"bottom": "inherit"
+// 		// })
+// 	}
+// }
+// homeAutoHeight();
+// $(window).resize(function() {
+// 	homeAutoHeight();
+// });
+</script>
+</body>
+</html>

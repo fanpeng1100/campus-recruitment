@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>关于京东</title>
+<link rel="stylesheet" href="css/base_7.css"/>
+<link rel="stylesheet" href="css/about-jd.css"/>
+</head>
+<body>
+
+<!-- 通用顶栏 -->
+<script src="js/jquery_7.js"></script>
+<script src="js/footer_7.js"></script>
+
+<!-- 通用顶栏 -->
+<div class="header">
+  <div class="wrap">
+    <!-- logo -->
+    <a href="/"><div class="logo">京东校园招聘</div></a>
+
+    <!-- 登录栏 -->
+    <div class="login">
+      <!-- 登录栏 未登录状态 -->
+      <a onclick="login();"; href="javascript:;">登录</a>&nbsp;|&nbsp;<a title="注册后需要重新登录招聘系统 "  onclick="register();"; href="javascript:;">注册</a>
+
+    </div>
+
+    <!-- 导航 -->
+    <ul class="nav">
+      <!-- class有  nav-curr  则为当前选中 -->
+      <li><a href="index.html" id="a1" class="nav-link nav-curr" onclick="changeStyle(1)">首&nbsp;&nbsp;页</a></li>
+      <li><a href="position.html" id="a6" class="nav-link J-nav-sub">招聘职位</a></li>
+      <!--<li><a href="/web/static/forward?to=property-layout&t=5" id="a5" class="nav-link J-nav-sub">产业布局</a></li>-->
+
+      <li><a href="process.html" id="a4" class="nav-link" >招聘流程</a></li>
+      <!--  <li><a href="/web/message/announcement_index?t=7" id="a7" class="nav-link">消息公告</a></li>-->
+
+      <!--    <li>
+           <a href="javascript:;" id="a3" class="nav-link J-nav-sub " >人才项目</a>
+           <div class="nav-sub J-nav-sub-list">
+               <a href="/web/static/forward?to=jd-run&t=3">京锐实习夏令营/JD RUN</a>
+               <a href="/web/static/forward?to=tet&t=3" >管理培训生/TET</a>
+               <a href="/web/static/forward?to=jd-imt&t=3">国际管培/IMT</a>
+           </div>
+         </li>
+       -->
+      <li>
+        <a href="talents.html" id="a3" class="nav-link J-nav-sub " >人才项目</a>
+        <div class="nav-sub J-nav-sub-list" style="display: none;">
+          <a href="">IMT 国际管培生</a>
+          <a href="">TET 管理培训生</a>
+          <a href="">TFS 区域未来之星</a>
+          <a href="">JD RUN 京锐实习夏令营</a>
+        </div>
+      </li>
+
+      <li><a href="help.html" id="a9" class="nav-link">招聘帮助</a></li>
+      <li>
+        <a href="about.html" id="a2" class="nav-link J-nav-sub " >关于京东</a>
+        <div class="nav-sub J-nav-sub-list" style="display: none;">
+          <a href="">京东介绍</a>
+          <a href="">校招视频</a>
+        </div>
+      </li>
+      <!--
+      <li><a href="/web/static/forward?to=about-jd&t=2" id="a2" class="nav-link J-nav-sub">关于京东</a></li>
+      <li><a href="/web/static/forward?to=video_list&t=8" id="a8" class="nav-link J-nav-sub">校招视频</a></li>
+       -->
+      <!--
+<li><a href="/web/static/forward?to=announcement&t=7" id="a7" class="nav-link">消息公告</a></li>
+-->
+    </ul>
+
+  </div>
+
+    <!-- 分享栏 -->
+    <div class="share" style="z-index: 999">
+        <ul>
+            <li class="share-wechat">
+                <a href="javascript:;"></a>
+                <div class="share-info"><img src="picture/wechatqr_7.jpg" alt="" style="z-index: 999"></div>
+            </li>
+            <li class="share-weibo">
+				<a href="javascript:;"></a>
+                <div class="share-info"><img src="picture/weiboqr_7.png" alt="" style="z-index: 999;width: 103px;height: 103px;"></div>
+			</li>
+        </ul>
+    </div>
+</div>
+
+
+<script>
+try {
+	$(function(){
+	var i = "2";
+	   if(i!=""&&i!="null"){
+	     $("#a1").removeClass('nav-curr');
+		 $("#a"+i).addClass(' nav-curr'); 
+	   }
+
+//		$('.share-wechat').mouseover(
+//				function () {
+//                    $('.share .share-info').css("display","block");
+//                }
+//		);
+//        $('.share-wechat').mouseout(
+//                function () {
+//                    $('.share .share-info').css("display","none");
+//                }
+//        );
+	});
+
+
+} catch (e) {
+}
+ 
+</script>
+
+<!-- 选项 -->
+<div class="wrap about-wrap">
+  <h2 class="subtitle">关于京东</h2>
+  
+  <ul class="tabs-nav">
+    <li class="active">了解京东</li>
+    <li>业务介绍</li>
+    <li>文化与责任</li>
+    <li>员工关怀</li>
+  </ul>
+</div>
+
+<!-- 了解京东 -->
+<div class="about-partial p-0">
+  <div class="wrap about-wrap">
+    <div class="content">
+      <div class="about-mask">
+        <img src="picture/about-jd-1.jpg" alt="">
+        <div class="about-mask-text">
+          <div class="valign_wrap">京东介绍</div>
+          <!--[if lt IE 8]><span></span><![endif]-->
+        </div>
+      </div>
+      <div class="about-item" style="margin-top:40px;">
+        <p>京东于2004年正式涉足电商领域。2015年，京东集团市场交易额达到4627亿元，净收入达到1813亿元，年交易额同比增长78%，增速是行业平均增速的2倍。京东入榜2016《财富》全球500强，成为中国首家、唯一入选的互联网企业，也是中国收入规模最大的互联网企业。截至2015年12月31日，京东集团拥有近11万名正式员工，业务涉及电商、金融和技术三大领域。</p>
+        <p>2014年5月，京东集团在美国纳斯达克证券交易所正式挂牌上市，是中国第一个成功赴美上市的大型综合型电商平台，并成功跻身全球前十大互联网公司排行榜，2015年7月，京东凭借高成长性入选纳斯达克100指数和纳斯达克100平均加权指数。</p>
+      </div>
+      <div class="about-pic"><img src="picture/about-jd-1-2.jpg" alt=""></div>
+      <div class="about-pic"><img src="picture/about-jd-1-3.jpg" alt=""></div>
+      <div class="about-pic"><img src="picture/about-jd-1-4.jpg" alt=""></div>
+    </div>
+  </div>
+</div>
+
+<!-- 京东发展 -->
+<div class="about-partial p-1">
+  <div class="wrap about-wrap">
+    <div class="content">
+      <div class="about-mask">
+        <img src="picture/about-jd-2-1.jpg">
+        <div class="about-mask-text">alt="">
+          <div class="valign_wrap">三大业务群</div>
+          <!--[if lt IE 8]><span></span><![endif]-->
+        </div>
+      </div>
+      <div class="about-item x-yewu">
+        <div class="about-group">
+          <div class="about-group-item x-yewu-eshop">
+            <div class="about-group-item-text">
+              <div class="valign_wrap">
+                <div></div>
+                <div>电商</div>
+              </div>
+              <!--[if lt IE 8]><span></span><![endif]-->
+            </div>
+            <div class="about-group-item-detail">
+              <div class="valign_wrap">通过内容丰富、人性化的网站与移动客户端以富有竞争力的价格，提供品质卓越的商品和服务，并以快速可靠的方式送达消费者，为用户提供最佳的在线购物体验。</div>
+              <!--[if lt IE 8]><span></span><![endif]-->
+            </div>
+          </div>
+          <div class="about-group-item x-yewu-finance">
+            <div class="about-group-item-text">
+              <div class="valign_wrap">
+                <div></div>
+                <div>金融</div>
+              </div>
+              <!--[if lt IE 8]><span></span><![endif]-->
+            </div>
+            <div class="about-group-item-detail">
+              <div class="valign_wrap">依托京东生态平台的交易数据和信用体系向社会各阶层提供融资贷款、理财、支付、众筹等各类金融服务，同时依托京东众创生态圈，为创业、创新者提供全产业链一站式服务。</div>
+              <!--[if lt IE 8]><span></span><![endif]-->
+            </div>
+          </div>
+          <div class="about-group-item x-yewu-tech">
+            <div class="about-group-item-text">
+              <div class="valign_wrap">
+                <div></div>
+                <div>技术</div>
+              </div>
+              <!--[if lt IE 8]><span></span><![endif]-->
+            </div>
+            <div class="about-group-item-detail">
+              <div class="valign_wrap">京东技术研发体系实现坚实的业务保障和创新性的技术突破，强势布局云和大数据，智能领域建立开放的生态体系。</div>
+              <!--[if lt IE 8]><span></span><![endif]-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap about-wrap" style="margin-bottom: 50px;">
+    <div class="content">
+      <div class="about-bit">京东商城</div>
+      <div class="about-mall-dep">
+        <span class="about-mall-dep-sepline"></span>
+        <div class="about-mall-dep-left">
+          <div class="about-mall-dep-item">
+            <div class="about-mall-dep-item-icon about-mall-dep-item-icon-appliances"></div>
+            <div class="about-mall-dep-item-text">
+              <div class="about-mall-dep-item-text-tit">家电事业部</div>
+              <div class="about-mall-dep-item-text-detail">京东家电的目标：成为中国家电第一零售渠道</div>
+            </div>
+          </div>
+          <div class="about-mall-dep-item">
+            <div class="about-mall-dep-item-icon about-mall-dep-item-icon-consumer"></div>
+            <div class="about-mall-dep-item-text">
+              <div class="about-mall-dep-item-text-tit">消费品事业部</div>
+              <div class="about-mall-dep-item-text-detail">京东是中国最大奶粉、纸尿裤、进口牛奶、白酒等消费品类的线上、线下零售商之一</div>
+            </div>
+          </div>
+          <div class="about-mall-dep-item">
+            <div class="about-mall-dep-item-icon about-mall-dep-item-icon-fresh"></div>
+            <div class="about-mall-dep-item-text">
+              <div class="about-mall-dep-item-text-tit">生鲜事业部</div>
+              <div class="about-mall-dep-item-text-detail">成为消费者安全放心的品质生鲜首选，拥有全国最大的冷藏冷冻一体化电商物流系统</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-mall-dep-right">
+          <div class="about-mall-dep-item">
+            <div class="about-mall-dep-item-icon about-mall-dep-item-icon-clothes"></div>
+            <div class="about-mall-dep-item-text">
+              <div class="about-mall-dep-item-text-tit">服饰家居事业部</div>
+              <div class="about-mall-dep-item-text-detail">京东服装2015年同比增长超过100%</div>
+            </div>
+          </div>
+          <div class="about-mall-dep-item">
+            <div class="about-mall-dep-item-icon about-mall-dep-item-icon-3c"></div>
+            <div class="about-mall-dep-item-text">
+              <div class="about-mall-dep-item-text-tit">3C产品事业部</div>
+              <div class="about-mall-dep-item-text-detail">京东已成为中国最大手机、数码、电脑零售商，超过其他任何平台的销售总和</div>
+            </div>
+          </div>
+          <div class="about-mall-dep-item">
+            <div class="about-mall-dep-item-icon about-mall-dep-item-icon-new"></div>
+            <div class="about-mall-dep-item-text">
+              <div class="about-mall-dep-item-text-tit">新通路事业部</div>
+              <div class="about-mall-dep-item-text-detail">新通路重释渠道价值，千亿团队服务百万商家</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-item">
+        <div class="about-littletit">基础物流</div>
+      </div>
+      <div class="about-item">
+        <div class="about-basetransport">
+          <div class="about-basetransport-item">
+            <div class="about-basetransport-tit">85%</div>
+            <div class="about-basetransport-detail">京东商城自营商品，当日达和次日达的订单占比已超过85%</div>
+          </div>
+          <div class="about-basetransport-item">
+            <div class="about-basetransport-tit">2<span>小时</span></div>
+            <div class="about-basetransport-detail">极速达服务升级，配送时效由3小时缩短至2小时</div>
+          </div>
+          <div class="about-basetransport-item">
+            <div class="about-basetransport-tit">209<span>个</span></div>
+            <div class="about-basetransport-detail">在全国运营了209个大型仓库</div>
+          </div>
+          <div class="about-basetransport-item">
+            <div class="about-basetransport-tit">5987<span>个</span></div>
+            <div class="about-basetransport-detail">有5987个配送站和自提点覆盖全国范围内的2493个区县</div>
+          </div>
+          <div class="about-basetransport-item">
+            <div class="about-basetransport-tit">430<span>万m<i>2</i></span></div>
+            <div class="about-basetransport-detail">仓储设施占地面积约430万平方米</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-item">
+        <div class="about-littletit">智能物流</div>
+      </div>
+      <div class="about-pic"><img src="picture/about-jd-2-3.jpg" alt=""></div>
+      <div class="about-item">
+        <div class="about-littletit">农村电商</div>
+      </div>
+      <div class="about-pic"><img src="picture/about-jd-2-4.jpg" alt=""></div>
+    </div>
+  </div>
+
+  <div class="whole-wrap">
+    <div class="wrap about-wrap">
+      <div class="content" style="padding-bottom: 58px; ">
+        <div class="about-bit">京东金融</div>
+        <div class="about-pic"><img src="picture/about-jd-2-5.jpg" alt=""></div>
+        <div class="about-item">
+          <div class="about-littletit">业务模块</div>
+        </div>
+        <div class="about-pic"><img src="picture/about-jd-2-6.jpg" alt=""></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap about-wrap">
+    <div class="content">
+      <div class="about-bit">京东技术</div>
+      <div class="about-item x-tech">
+        <div class="about-group">
+          <div class="about-group-item">
+            <div class="about-group-item-text">
+              <div class="valign_wrap">业务保障</div>
+              <!--[if lt IE 8]><span></span><![endif]-->
+            </div>
+            <div class="about-group-item-detail">
+              <div class="valign_wrap">
+                <div>业务保障</div>
+                <div>基础保障</div>
+                <div>平台保障</div>
+                <div>安全保障</div>
+              </div>
+              <!--[if lt IE 8]><span></span><![endif]-->
+            </div>
+          </div>
+          <div class="about-group-item">
+            <div class="about-group-item-text">
+              <div class="valign_wrap">技术突破</div>
+              <!--[if lt IE 8]><span></span><![endif]-->
+            </div>
+            <div class="about-group-item-detail">
+              <div class="valign_wrap">
+                <div>技术突破</div>
+                <div>大数据</div>
+                <div>京东云</div>
+                <div>智能生态</div>
+              </div>
+              <!--[if lt IE 8]><span></span><![endif]-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- 文化与责任 -->
+<div class="about-partial p-2">
+  <div class="wrap about-wrap">
+    <div class="content">
+      <div class="about-pic"><img src="picture/about-jd-3-1.jpg" alt=""></div>
+    </div>
+  </div>
+
+  <div class="wrap about-wrap" style="margin-top:44px; margin-bottom: 43px;">
+    <div class="content">
+      <div class="about-pic"><img src="picture/about-jd-3-2.jpg" alt=""></div>
+    </div>
+  </div>
+
+  <div class="whole-wrap">
+    <div class="wrap about-wrap">
+      <div class="content">
+        <div class="about-pic" style="margin-bottom: 95px;margin-top:49px;"><img src="picture/about-jd-3-3.jpg" alt=""></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap about-wrap" style="padding-top:51px;">
+    <div class="content">
+      <div class="about-pic"><img src="picture/about-jd-3-4.jpg" alt=""></div>
+      <div class="about-pic" style="margin-top:87px;"><img src="picture/about-jd-3-5.jpg" alt=""></div>
+    </div>
+  </div>
+</div>
+
+<!-- 员工关怀 -->
+<div class="about-partial p-3">
+  <div class="wrap about-wrap">
+    <div class="content">
+      <div class="about-mask">
+        <img src="picture/about-jd-4-1.png" alt="">
+        <div class="about-mask-text">
+          <div class="valign_wrap">全面福利伴随京东人幸福生活</div>
+          <!--[if lt IE 8]><span></span><![endif]-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap about-wrap">
+    <div class="content">
+      <div class="about-item">
+        <div class="about-redcentroidtit">京东福利“最具人气奖”TOP3</div>
+      </div>
+      <div class="about-item x-fuli">
+        <div class="about-group" style="margin-bottom: 70px;">
+          <div class="about-group-item x-fuli-pregnant">
+            <div class="about-group-item-text">
+              <div class="valign_wrap">
+                <div></div>
+                <div>超长产假</div>
+              </div>
+              <!--[if lt IE 8]><span></span><![endif]-->
+            </div>
+            <div class="about-group-item-detail">
+              <div class="valign_wrap">
+                <div>女员工法定假+30天带薪假</div>
+                <div>男员工法定假+7天带薪假</div>
+              </div>
+              <!--[if lt IE 8]><span></span><![endif]-->
+            </div>
+          </div>
+          <div class="about-group-item x-fuli-house">
+            <div class="about-group-item-text">
+              <div class="valign_wrap">
+                <div></div>
+                <div>安居计划</div>
+              </div>
+              <!--[if lt IE 8]><span></span><![endif]-->
+            </div>
+            <div class="about-group-item-detail">
+              <div class="valign_wrap">
+                <div>总投入10亿</div>
+                <div>人均贷款额达到64万</div>
+                <div>个人最高贷款额达到100万</div>
+              </div>
+              <!--[if lt IE 8]><span></span><![endif]-->
+            </div>
+          </div>
+          <div class="about-group-item x-fuli-rescue">
+            <div class="about-group-item-text">
+              <div class="valign_wrap">
+                <div></div>
+                <div>员工救助基金</div>
+              </div>
+              <!--[if lt IE 8]><span></span><![endif]-->
+            </div>
+            <div class="about-group-item-detail">
+              <div class="valign_wrap">
+                <div>从400万提升到3000万</div>
+                <div>单次申请从2万提升到10万</div>
+              </div>
+              <!--[if lt IE 8]><span></span><![endif]-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="whole-wrap">
+    <div class="wrap about-wrap">
+      <div class="content">
+        <div class="about-pic" style="margin-top:75px; margin-bottom: 85px;"><img src="picture/about-jd-4-3.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap about-wrap">
+    <div class="content">
+      <div class="about-pic" style="margin-top:88px;margin-bottom:15px;"><img src="picture/about-jd-4-4.jpg" alt=""></div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- footer -->
+<div class="footer">
+	<div class="wrap">
+		<ul class="friend-link">
+			<li><a href="//www.jd.com" target="_blank">京东(JD.COM)</a></li>
+			<li>|</li>
+			<li><a href="//zhaopin.jd.com" target="_blank">京东招聘</a></li>
+			<li>|</li>
+			<li><a href="//xiaoyuan.jd.com" target="_blank">高校合作</a></li>
+			<li>|</li>
+			<li><a href="//edu.jd.com/" target="_blank">校园特权</a></li>
+			<li>|</li>
+			<li><a href="//gongyi.jd.com/index/index_pwp_gy_0_0.html" target="_blank">京东公益</a></li>
+			<li>|</li>
+			<li><a href="//help.jd.com/index.html" target="_blank">客服中心</a></li>
+		</ul>
+		<span class="copyright">
+			Copyright © 2004-2015  京东JD.com 版权所有
+		</span>
+		<a href="//jdc.jd.com/" title="京东用户体验设计部" target="_blank" class="jdc-link"></a>
+	</div>
+</div>
+<script type="text/javascript">
+    var jaq = jaq || [];
+    jaq.push(['account', 'JA2016_113480']); //站点编号
+    jaq.push(['domain', 'campus.jd.com']);  //站点域名
+	jaq.push(['topic','_topic_']); //topic
+(function () {
+        var ja = document.createElement('script');
+        ja.type = 'text/javascript';
+        ja.async = true;
+        ja.src = ('https:' == document.location.protocol ? 'https://wlssl' : 'http://wl') + '.jd.com/joya.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ja, s);
+    })();
+</script>
+<script src="js/jquery_7.js"></script>
+<script src="js/main_7.js"></script>
+
+<!-- 返回顶部按钮 -->
+<script src="js/backtotop.js"></script>
+<script type="text/javascript">
+  BackToTop.init($('.wrap:eq(0)'))
+</script>
+
+<script>
+  tabsNav('.about-wrap', '.about-partial')
+</script>
+
+</body>
+</html>

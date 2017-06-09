@@ -1,0 +1,427 @@
+﻿body {
+    display: -webkit-box;
+    display: flex;
+    min-height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    background: #f6f6f6;
+    line-height: 1.4;
+    color: #333;
+    font-size: 12px
+}
+
+body, dd, dl, form, h1, h2, h3, h4, h5, h6, ol, p, ul {
+    margin: 0
+}
+
+ol, ul {
+    padding-left: 0;
+    list-style-type: none
+}
+
+h4, h5, h6 {
+    font-size: 1em
+}
+
+input, select, textarea {
+    font-size: 100%;
+    font-family: inherit
+}
+
+img {
+    border: 0
+}
+
+a {
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+body {
+    font-family: "Microsoft Yahei"
+}
+
+a {
+    color: #5a5a5a
+}
+
+.show {
+    display: block !important
+}
+
+.hide {
+    display: none !important
+}
+
+.wrap {
+    -webkit-box-flex: 1;
+    flex: 1;
+    width: 1060px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.row::after, .wrap::after {
+    clear: both;
+    content: "";
+    display: table
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+    height: 45px;
+    background-color: #FFF;
+    border-bottom: 2px solid #E6E6E6
+}
+
+.header::after {
+    clear: both;
+    content: "";
+    display: table
+}
+
+.logo {
+    float: left;
+    width: 160px;
+    height: 45px;
+    background: url(../images/logo_6.png) left 12px no-repeat;
+    text-indent: -99em
+}
+
+.login {
+    margin-right: 20px;
+    position: relative;
+    z-index: 1;
+    float: right;
+    height: 45px;
+    font-size: 14px;
+    line-height: 45px;
+    text-align: left
+}
+
+.nav {
+    float: left;
+    height: 45px;
+    margin-left: 70px
+}
+
+.nav .nav-link {
+    display: block;
+    height: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 0px;
+    border-top: 2px solid #FFF;
+    font-size: 14px;
+    line-height: 42px
+}
+
+.nav .nav-link:hover {
+    text-decoration: none;
+    border-top-color: #E43C3F;
+    color: #E43C3F
+}
+
+.nav .nav-curr {
+    border-top-color: #E43C3F;
+    color: #E43C3F
+}
+
+.nav li {
+    position: relative;
+    float: left
+}
+
+.nav-sub {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 45px;
+    display: none;
+    background-color: #FFF;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3)
+}
+
+.nav-sub a {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    line-height: 44px;
+    white-space: nowrap
+}
+
+.nav-sub a:hover {
+    color: #E43C3F
+}
+
+.login-list {
+    width: 150px;
+    position: absolute;
+    left: -82px;
+    top: 0;
+    background-color: #FFF;
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #FFF
+}
+
+.login-list a {
+    display: inline-block;
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    line-height: 16px
+}
+
+.login-list a:hover {
+    color: #E43C3F
+}
+
+.login-list li {
+    display: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+    font-size: 14px
+}
+
+.login-list .login-info {
+    position: relative;
+    display: block
+}
+
+.login-list .login-info span {
+    float: left;
+    display: inline-block;
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal
+}
+
+.login-list .login-info i {
+    position: relative;
+    left: 10px;
+    top: -2px;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-color: #CCC #FFF #FFF;
+    border-style: solid dashed dashed;
+    border-width: 5px
+}
+
+.login-list .login-out {
+    border-top: 1px solid #CCC
+}
+
+.login-list-target {
+    border-color: #ECECEC;
+    border-bottom: 1px solid #ECECEC;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3)
+}
+
+.login-list-target > .login-info:before {
+    content: none
+}
+
+.login-info:before {
+    content: '';
+    width: 100%;
+    border: 1px solid #e6e9ed;
+    position: absolute;
+    left: -10px;
+    height: 65%;
+    margin: 9px;
+    top: -2px;
+    border-radius: 3px
+}
+
+.login-list-target li {
+    display: block
+}
+
+.login-list-target .login-info i {
+    top: -8px;
+    border-color: #FFF #FFF #CCC;
+    border-style: dashed dashed solid
+}
+
+.btn-gray, .btn-red {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 2px;
+    background-color: #E43C3F;
+    color: #FFF;
+    font-family: "Microsoft Yahei"
+}
+
+.btn-gray:hover, .btn-red:hover {
+    text-decoration: none;
+    background-color: #e75255
+}
+
+.btn-gray:active, .btn-red:active {
+    background-color: #e12629
+}
+
+.btn-gray {
+    border: 1px solid #E6E9EE;
+    background-color: #F5F5F5;
+    color: #999
+}
+
+.btn-gray:active, .btn-gray:hover {
+    background-color: #F5F5F5
+}
+
+.footer {
+    width: 100%;
+    height: 40px;
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    border-top: 1px solid #E6E9EE;
+    background: #fff url(../images/logo-jdc-gray_6.png) center 22px no-repeat;
+    line-height: 40px
+}
+
+.footer::after {
+    clear: both;
+    content: "";
+    display: table
+}
+
+.friend-link {
+    float: left;
+    color: #999
+}
+
+.friend-link li {
+    float: left;
+    padding-right: 3px;
+    padding-left: 3px
+}
+
+.friend-link a {
+    color: #999;
+    font-size: 14px
+}
+
+.copyright {
+    float: right;
+    color: #999;
+    font-size: 12px
+}
+
+.jdc-link {
+    display: block;
+    width: 100px;
+    height: 40px;
+    margin: 0 auto
+}
+
+.navigation {
+    font-size: 16px;
+    text-align: right;
+    margin-top: 10px
+}
+
+.navigation a {
+    display: inline-block;
+    height: 24px;
+    padding: 0 6px;
+    line-height: 24px;
+    color: #5a5a5a;
+    border: 1px solid transparent
+}
+
+.navigation a.next {
+    color: #a0a0a0;
+    border-color: #e6e9ed
+}
+
+.navigation a:hover {
+    border-color: #e6e9ed;
+    text-decoration: none
+}
+
+.navigation a.curr {
+    border-color: transparent;
+    border-bottom: 3px solid #e4393c;
+    color: #e4393c
+}
+
+.navigation span {
+    padding: 0 6px
+}
+
+.share {
+    float: right;
+    width: 62px;
+    height: 45px;
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+.share li {
+    margin-top: 15px;
+    float: left
+}
+
+.share li a {
+    display: block;
+    height: 45px;
+    cursor: default
+}
+
+.share .share-info {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    /*border: 1px solid #e6e6e6;*/
+    border-top: none;
+    z-index: 999;
+}
+
+.share .share-info.target {
+    display: block
+}
+
+.share .share-wechat {
+    width: 18px;
+    height: 14px;
+    background-image: url('../images/icon_6.png');
+    background-position: 0 -140px;
+    background-repeat: no-repeat;
+    -webkit-background-size: 42px auto;
+    margin-right: 12px
+}
+
+.share .share-weibo {
+    width: 17px;
+    height: 14px;
+    background-image: url('../images/icon_6.png');
+    background-position: 0 -164px;
+    background-repeat: no-repeat;
+    -webkit-background-size: 42px auto;
+    margin-right: 10px
+}

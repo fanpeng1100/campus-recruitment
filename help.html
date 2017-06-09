@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <title>招聘帮助</title>
+	<link rel="stylesheet" href="css/base_6.css"/>
+  <link rel="stylesheet" href="css/recruit_help.css"/>
+</head>
+<body>
+
+  <!-- 通用顶栏 -->
+  <script src="js/jquery_6.js"></script>
+<script src="js/footer_6.js"></script>
+
+  <!-- 通用顶栏 -->
+  <div class="header">
+      <div class="wrap">
+          <!-- logo -->
+          <a href="/"><div class="logo">京东校园招聘</div></a>
+
+          <!-- 登录栏 -->
+          <div class="login">
+              <!-- 登录栏 未登录状态 -->
+              <a onclick="login();"; href="javascript:;">登录</a>&nbsp;|&nbsp;<a title="注册后需要重新登录招聘系统 "  onclick="register();"; href="javascript:;">注册</a>
+
+          </div>
+
+          <!-- 导航 -->
+          <ul class="nav">
+              <!-- class有  nav-curr  则为当前选中 -->
+              <li><a href="index.html" id="a1" class="nav-link nav-curr" onclick="changeStyle(1)">首&nbsp;&nbsp;页</a></li>
+              <li><a href="position.html" id="a6" class="nav-link J-nav-sub">招聘职位</a></li>
+              <!--<li><a href="/web/static/forward?to=property-layout&t=5" id="a5" class="nav-link J-nav-sub">产业布局</a></li>-->
+
+              <li><a href="process.html" id="a4" class="nav-link" >招聘流程</a></li>
+              <!--  <li><a href="/web/message/announcement_index?t=7" id="a7" class="nav-link">消息公告</a></li>-->
+
+              <!--    <li>
+                   <a href="javascript:;" id="a3" class="nav-link J-nav-sub " >人才项目</a>
+                   <div class="nav-sub J-nav-sub-list">
+                       <a href="/web/static/forward?to=jd-run&t=3">京锐实习夏令营/JD RUN</a>
+                       <a href="/web/static/forward?to=tet&t=3" >管理培训生/TET</a>
+                       <a href="/web/static/forward?to=jd-imt&t=3">国际管培/IMT</a>
+                   </div>
+                 </li>
+               -->
+              <li>
+                  <a href="talents.html" id="a3" class="nav-link J-nav-sub " >人才项目</a>
+                  <div class="nav-sub J-nav-sub-list" style="display: none;">
+                      <a href="">IMT 国际管培生</a>
+                      <a href="">TET 管理培训生</a>
+                      <a href="">TFS 区域未来之星</a>
+                      <a href="">JD RUN 京锐实习夏令营</a>
+                  </div>
+              </li>
+
+              <li><a href="help.html" id="a9" class="nav-link">招聘帮助</a></li>
+              <li>
+                  <a href="about.html" id="a2" class="nav-link J-nav-sub " >关于京东</a>
+                  <div class="nav-sub J-nav-sub-list" style="display: none;">
+                      <a href="">京东介绍</a>
+                      <a href="">校招视频</a>
+                  </div>
+              </li>
+              <!--
+              <li><a href="/web/static/forward?to=about-jd&t=2" id="a2" class="nav-link J-nav-sub">关于京东</a></li>
+              <li><a href="/web/static/forward?to=video_list&t=8" id="a8" class="nav-link J-nav-sub">校招视频</a></li>
+               -->
+              <!--
+        <li><a href="/web/static/forward?to=announcement&t=7" id="a7" class="nav-link">消息公告</a></li>
+        -->
+          </ul>
+
+      </div>
+
+    <!-- 分享栏 -->
+    <div class="share" style="z-index: 999">
+        <ul>
+            <li class="share-wechat">
+                <a href="javascript:;"></a>
+                <div class="share-info"><img src="picture/wechatqr_6.jpg" alt="" style="z-index: 999"></div>
+            </li>
+            <li class="share-weibo">
+				<a href="javascript:;"></a>
+                <div class="share-info"><img src="picture/weiboqr_6.png" alt="" style="z-index: 999;width: 103px;height: 103px;"></div>
+			</li>
+        </ul>
+    </div>
+</div>
+
+
+<script>
+try {
+	$(function(){
+	var i = "9";
+	   if(i!=""&&i!="null"){
+	     $("#a1").removeClass('nav-curr');
+		 $("#a"+i).addClass(' nav-curr'); 
+	   }
+
+//		$('.share-wechat').mouseover(
+//				function () {
+//                    $('.share .share-info').css("display","block");
+//                }
+//		);
+//        $('.share-wechat').mouseout(
+//                function () {
+//                    $('.share .share-info').css("display","none");
+//                }
+//        );
+	});
+
+
+} catch (e) {
+}
+ 
+</script>
+
+  <!-- 主体内容 -->
+  <div class="wrap help_wrap">
+      <div class="help_main">
+          <div class="help_main_tit">招聘帮助</div>
+          <input type="hidden" id="totalCount" value="12"/>
+
+          <!-- 招聘帮助列表 -->
+          <!-- 管理员添加类 .admin -->
+          <div class="help_main_list admin">
+              <ul id="cmsContent">
+              
+              	
+                <!-- 置顶添加类 .onTop -->
+                <li class="onTop">
+                    <div class="list_main">
+                        <h2 class="list_name"><a href="#">据了解京东2017校园招聘是上次招聘的延续吗？</a></h2>
+                        <p class="list_time"><i class="clock"></i><span>2017-01-15</span></p>
+                        <div class="list_opts">
+                          <span class="help_arrow"></span>
+                          <ul class="list_dropDown">
+                              <li>置顶</li>
+                              <li>删除</li>
+                          </ul>
+                        </div>
+                        <div class="list_ctn">
+                            <span class="list_ctn_more"><span class="ellipsis">…</span><a href="#">更多>> </a></span>
+                            京东2017校园招聘在2016年秋季已经完成绝大部分职位的招聘，但伴随京东业务拓展，有部分新的招聘职位在2017年春季启动招聘，同属于京东2017校园招聘，在2016年与京东错过的小伙伴们，可快来吧京东2017校园招聘在2016年秋季已经完成绝大部分职位的招聘，但伴随京东业务拓展，有部分新的招聘职位在2017年春季启动招聘，同属于京东2017校园招聘，在2016年与京东错过的小伙伴们，可快来吧
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="list_main">
+                        <h2 class="list_name"><a href="#">我在选择岗位的时候看到有6个方向的职位，与4个人才项目，如何做区分？我可以投递多个吗？</a></h2>
+                        <p class="list_time"><i class="clock"></i><span>2017-01-15</span></p>
+                        <div class="list_opts">
+                          <span class="help_arrow"></span>
+                          <ul class="list_dropDown">
+                              <li>置顶</li>
+                              <li>删除</li>
+                          </ul>
+                        </div>
+                        <div class="list_ctn">
+                            <span class="list_ctn_more"><span class="ellipsis">…</span><a href="#">更多>> </a></span>
+                            京东2017校园招聘包含6大职位方向与4大人才项目；您所看到的6大职位方向（技术方向、设计方向、产品方向、市场方向、职能方向、供应链方向）即专业人才型校招，面向2017年毕业本科及以上学历的京东2017校园招聘包含6大职位方向与4大人才项目；您所看到的6大职位方向（技术方向、设计方向、产品方向、市场方向、职能方向、供应链方向）即专业人才型校招，面向2017年毕业本科及以上学历的
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="list_main">
+                        <h2 class="list_name"><a href="#">请问今年的校园招聘在全国招聘的人数和地点？</a></h2>
+                        <p class="list_time"><i class="clock"></i><span>2017-01-15</span></p>
+                        <div class="list_opts">
+                          <span class="help_arrow"></span>
+                          <ul class="list_dropDown">
+                              <li>置顶</li>
+                              <li>删除</li>
+                          </ul>
+                        </div>
+                        <div class="list_ctn">
+                            <span class="list_ctn_more"><span class="ellipsis">…</span><a href="#">更多>> </a></span>
+                            京东2017校园招聘在2016年秋季已经完成绝大部分职位的招聘，但伴随京东业务拓展，有部分新的招聘职位在2017年春季启动招聘，同属于京东2017校园招聘，在2016年与京东错过的小伙伴们，可快来吧京东2017校园招聘在2016年秋季已经完成绝大部分职位的招聘，但伴随京东业务拓展，有部分新的招聘职位在2017年春季启动招聘，同属于京东2017校园招聘，在2016年与京东错过的小伙伴们，可快来吧
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="list_main">
+                        <h2 class="list_name"><a href="#">据了解京东2017校园招聘是上次招聘的延续吗？</a></h2>
+                        <p class="list_time"><i class="clock"></i><span>2017-01-15</span></p>
+                        <div class="list_opts">
+                          <span class="help_arrow"></span>
+                          <ul class="list_dropDown">
+                              <li>置顶</li>
+                              <li>删除</li>
+                          </ul>
+                        </div>
+                        <div class="list_ctn">
+                            <span class="list_ctn_more"><span class="ellipsis">…</span><a href="#">更多>> </a></span>
+                            京东2017校园招聘于2016年秋季在北京、哈尔滨、上海、武汉、西安、成都、广州等城市进行专场面试、总招聘量达2000余人。2017年春季校招将有数百职位全新开放投递，欢迎同学积极申请京东2017校园招聘于2016年秋季在北京、哈尔滨、上海、武汉、西安、成都、广州等城市进行专场面试、总招聘量达2000余人。2017年春季校招将有数百职位全新开放投递，欢迎同学积极申请
+                        </div>
+                    </div>
+                </li>
+                
+              </ul>
+              
+              <!-- 翻页按钮 -->
+              <div class="jd-pagination-wrap">
+              </div>
+              
+              <!-- 翻页按钮 
+              <div class="jd-pagination-wrap">
+                <div class="jd-pagination">-->
+                  <!--
+                    disabled: 翻页按钮不可用
+                    active: 当前页
+                   -->
+                  <!--<a class="toStart disabled" href="#"><i></i></a>
+                  <a class="prev disabled" href="#"><i></i></a>
+                  <div class="jd-pagination-nav">
+                      <a href="#" class="active">1</a>
+                      <a href="#">2</a>
+                      <a href="#">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                      <a href="#">...</a>
+                      <a href="#">20</a>
+                  </div>
+                  <a class="next" href="#"><i></i></a>
+                  <a class="toEnd" href="#"><i></i></a>
+                  <input type="text" name="" value="">
+          				<input type="button" name="" value="GO">
+                </div>
+              </div>-->
+          </div>
+          <!-- End -->
+
+          <!-- 招聘帮助内页 -->
+          <div class="help_main_ctn admin" style="display: none">
+            <article>
+                <h2 class="ctn_name">据了解京东2017校园招聘是上次招聘的延续吗？</h2>
+                <p class="ctn_time"><i class="clock"></i><span>2017-01-15</span></p>
+                <div class="list_opts">
+                  <span class="help_arrow"></span>
+                  <ul class="list_dropDown">
+                      <li>置顶</li>
+                      <li>删除</li>
+                  </ul>
+                </div>
+                <div class="ctn_article">
+                    <p>京东2017校园招聘在2016年秋季已经完成绝大部分职位的招聘，但伴随京东业务拓展，有部分新的招聘职位在2017年春季启动招聘，同属于京东2017校园招聘，在2016年与京东错过的小伙伴们，可快来吧！</p>
+                    <br/>
+                    <p>京东2017校园招聘包含6大职位方向与4大人才项目；您所看到的6大职位方向（技术方向、设计方向、产品方向、市场方向、职能方向、供应链方向）即专业人才型校招，面向2017年毕业本科及以上学历的应届生开放，招聘人数最多，以招募优秀专业人才为目标，以专业的人才培养模式，让同学们在所从事的岗位方向上以京东的速度快速成长。</p>
+                    <figure>
+                      <img src="picture/article.jpg" alt="">
+                    </figure>
+                    <p>“管培生”旨在招募校园人才并培养为京东管理者，面向全球招募顶尖优秀校园高潜质人才，通过轮岗周期完成职业晋升，如果您对企业管理有热情、并励志期望成长为企业管理者，管培生offer等你来挑战！</p>
+                    <p> “京锐实习夏令营”是京东打造的一个全新模式的实习体验平台，面向2018年及以后毕业的同学开放，在2017年的暑期进行8周的京东生活、工作体验。这个项目重在实习体验和品牌传播，旨在给在校学生提供一个了解京东的“夏令营”。同学可以最多选择2个项目进行投递。京东2017校园招聘于2016年秋季在北京、哈尔滨、上海、武汉、西安、成都、广州等城市进行专场面试、总招聘量达2000余人。2017年春季校招将有数百职位全新开放投递，欢迎同学积极申请。</p>
+                    <br/>
+                    <p>我是2016届的毕业生，我能参加这次这次校园招聘吗？本次校园招聘仅针对2017届应届毕业生，非2017届毕业生可以关注京东社会招聘信息，"京东招聘"的微信及官方网站都会及时更新岗位信息本次校园招聘不在我所在的城市进行宣讲、笔试和面试，是否也可以投简历？我们欢迎各地同学踊跃投递简历，希望大家在投递简历的同时，根据自己的情况选择【就近城市】为面试城市，或部分岗位可选择【远程面试】（电话或视频面试）以便我们为同学们安排在网申提交简</p>
+                </div>
+            </article>
+            <!-- 翻页按钮 -->
+            <div class="jd-pagination-wrap">
+              <div class="jd-pagination">
+                <!--
+                  disabled: 翻页按钮不可用
+                  active: 当前页
+                 -->
+                <div class="jd-pagination-nav">
+                  <a href="#" class="active">1</a>
+                  <a href="#">2</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End -->
+      </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+	<div class="wrap">
+		<ul class="friend-link">
+			<li><a href="//www.jd.com" target="_blank">京东(JD.COM)</a></li>
+			<li>|</li>
+			<li><a href="//zhaopin.jd.com" target="_blank">京东招聘</a></li>
+			<li>|</li>
+			<li><a href="//xiaoyuan.jd.com" target="_blank">高校合作</a></li>
+			<li>|</li>
+			<li><a href="//edu.jd.com/" target="_blank">校园特权</a></li>
+			<li>|</li>
+			<li><a href="//gongyi.jd.com/index/index_pwp_gy_0_0.html" target="_blank">京东公益</a></li>
+			<li>|</li>
+			<li><a href="//help.jd.com/index.html" target="_blank">客服中心</a></li>
+		</ul>
+		<span class="copyright">
+			Copyright © 2004-2015  京东JD.com 版权所有
+		</span>
+		<a href="//jdc.jd.com/" title="京东用户体验设计部" target="_blank" class="jdc-link"></a>
+	</div>
+</div>
+<script type="text/javascript">
+    var jaq = jaq || [];
+    jaq.push(['account', 'JA2016_113480']); //站点编号
+    jaq.push(['domain', 'campus.jd.com']);  //站点域名
+	jaq.push(['topic','_topic_']); //topic
+(function () {
+        var ja = document.createElement('script');
+        ja.type = 'text/javascript';
+        ja.async = true;
+        ja.src = ('https:' == document.location.protocol ? 'https://wlssl' : 'http://wl') + '.jd.com/joya.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ja, s);
+    })();
+</script>  
+  <script src="js/jquery_6.js"></script>
+  <script src="js/main_6.js"></script>
+  <script src="js/recruithelp.js"></script>
+  <!-- 下拉 -->
+  <script type="text/javascript">
+    (function() {
+        var arrow = $('.help_arrow'),
+            hasCls = false;
+        var doc = document.documentElement;
+        arrow.on('click',function(event) {
+            event.stopPropagation()
+            hasCls == false?hasCls=true:hasCls=false;
+            $(this).toggleClass('help_arrow_s');
+        })
+        $(doc).on('click',function() {
+            if(!hasCls) return;
+            arrow.removeClass('help_arrow_s');
+            hasCls = false;
+        })
+    })()
+  </script>
+  </html>

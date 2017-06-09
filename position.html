@@ -1,0 +1,623 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>招聘职位</title>
+
+<link rel="stylesheet" href="css/base_1.css"/>
+<link rel="stylesheet" href="css/resume.css"/>
+<link rel="stylesheet" href="css/jd-recruit.css"/>
+</head>
+<body>
+	<!-- 遮罩层 -->
+<div class="jd-full-mask hide"></div>
+<!-- 加载中的图片 -->
+<div class="jd-loading hide"></div>
+
+<!-- 通用顶栏 -->
+<script src="js/jquery_1.js"></script>
+<script src="js/footer_1.js"></script>
+
+    <!-- 通用顶栏 -->
+    <div class="header">
+        <div class="wrap">
+            <!-- logo -->
+            <a href="/"><div class="logo">京东校园招聘</div></a>
+
+            <!-- 登录栏 -->
+            <div class="login">
+                <!-- 登录栏 未登录状态 -->
+                <a onclick="login();"; href="javascript:;">登录</a>&nbsp;|&nbsp;<a title="注册后需要重新登录招聘系统 "  onclick="register();"; href="javascript:;">注册</a>
+
+            </div>
+
+            <!-- 导航 -->
+            <ul class="nav">
+                <!-- class有  nav-curr  则为当前选中 -->
+                <li><a href="index.html" id="a1" class="nav-link nav-curr" onclick="changeStyle(1)">首&nbsp;&nbsp;页</a></li>
+                <li><a href="position.html" id="a6" class="nav-link J-nav-sub">招聘职位</a></li>
+                <!--<li><a href="/web/static/forward?to=property-layout&t=5" id="a5" class="nav-link J-nav-sub">产业布局</a></li>-->
+
+                <li><a href="process.html" id="a4" class="nav-link" >招聘流程</a></li>
+                <!--  <li><a href="/web/message/announcement_index?t=7" id="a7" class="nav-link">消息公告</a></li>-->
+
+                <!--    <li>
+                     <a href="javascript:;" id="a3" class="nav-link J-nav-sub " >人才项目</a>
+                     <div class="nav-sub J-nav-sub-list">
+                         <a href="/web/static/forward?to=jd-run&t=3">京锐实习夏令营/JD RUN</a>
+                         <a href="/web/static/forward?to=tet&t=3" >管理培训生/TET</a>
+                         <a href="/web/static/forward?to=jd-imt&t=3">国际管培/IMT</a>
+                     </div>
+                   </li>
+                 -->
+                <li>
+                    <a href="talents.html" id="a3" class="nav-link J-nav-sub " >人才项目</a>
+                    <div class="nav-sub J-nav-sub-list" style="display: none;">
+                        <a href="">IMT 国际管培生</a>
+                        <a href="">TET 管理培训生</a>
+                        <a href="">TFS 区域未来之星</a>
+                        <a href="">JD RUN 京锐实习夏令营</a>
+                    </div>
+                </li>
+
+                <li><a href="help.html" id="a9" class="nav-link">招聘帮助</a></li>
+                <li>
+                    <a href="about.html" id="a2" class="nav-link J-nav-sub " >关于京东</a>
+                    <div class="nav-sub J-nav-sub-list" style="display: none;">
+                        <a href="">京东介绍</a>
+                        <a href="">校招视频</a>
+                    </div>
+                </li>
+                <!--
+                <li><a href="/web/static/forward?to=about-jd&t=2" id="a2" class="nav-link J-nav-sub">关于京东</a></li>
+                <li><a href="/web/static/forward?to=video_list&t=8" id="a8" class="nav-link J-nav-sub">校招视频</a></li>
+                 -->
+                <!--
+          <li><a href="/web/static/forward?to=announcement&t=7" id="a7" class="nav-link">消息公告</a></li>
+          -->
+            </ul>
+
+        </div>
+
+    <!-- 分享栏 -->
+    <div class="share" style="z-index: 999">
+        <ul>
+            <li class="share-wechat">
+                <a href="javascript:;"></a>
+                <div class="share-info"><img src="picture/wechatqr_1.jpg" alt="" style="z-index: 999"></div>
+            </li>
+            <li class="share-weibo">
+				<a href="javascript:;"></a>
+                <div class="share-info"><img src="picture/weiboqr_1.png" alt="" style="z-index: 999;width: 103px;height: 103px;"></div>
+			</li>
+        </ul>
+    </div>
+</div>
+
+
+<script>
+try {
+	$(function(){
+	var i = "6";
+	   if(i!=""&&i!="null"){
+	     $("#a1").removeClass('nav-curr');
+		 $("#a"+i).addClass(' nav-curr'); 
+	   }
+
+//		$('.share-wechat').mouseover(
+//				function () {
+//                    $('.share .share-info').css("display","block");
+//                }
+//		);
+//        $('.share-wechat').mouseout(
+//                function () {
+//                    $('.share .share-info').css("display","none");
+//                }
+//        );
+	});
+
+
+} catch (e) {
+}
+ 
+</script>
+
+<div class="wrap recruit-wrap leave-blank">
+  <input type="hidden" id="count" name="count">
+  <input type="hidden" id="hotType" name="hotType">
+  <input type="hidden" id="loginType" name="loginType" value="no">	
+  <input type="hidden" id="jobId" name="jobId">
+  <input type="hidden" id="jobName" name="jobName">	
+  
+  <h2 class="subtitle">招聘职位</h2>
+  
+  <!-- 20160708 左侧栏移除 -->
+  <!-- 左侧栏 -->
+  <!--<div class="jd-sidebar">-->
+    <!--<div class="jd-sidebar-box">
+    <div class="jd-sidebar-box-header">职位类别</div>
+
+      <div id="jobType" class="jd-checkboxes">
+							<div class="jd-checkbox">
+                  <input type="checkbox" name="jType" value="01">
+                  <label>专业人才</label>
+                </div>
+	        				<div class="jd-checkbox">
+                  <input type="checkbox" name="jType" value="02">
+                  <label>管培生项目</label>
+                </div>
+	        				<div class="jd-checkbox">
+                  <input type="checkbox" name="jType" value="03">
+                  <label>国际管培生</label>
+                </div>
+	        				<div class="jd-checkbox">
+                  <input type="checkbox" name="jType" value="04">
+                  <label>京锐实习夏令营</label>
+                </div>
+	        				<div class="jd-checkbox">
+                  <input type="checkbox" name="jType" value="05">
+                  <label>TFS</label>
+                </div>
+	        	  </div>
+    </div>-->
+
+	<!--
+    <div id="jobCategory" class="jd-sidebar-box">
+      <div class="jd-sidebar-box-header">综合人才项目</div>
+
+	  <div class="jd-checkboxes">
+						<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx08001" >
+                  <label>管理培训生   </label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx09001" >
+                  <label>海外技术招聘</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx07001" >
+                  <label>京锐实习夏令营</label>
+                </div>
+	     	  </div>
+      <div class="jd-checkboxes" style="clear: both;padding-top:20px"></div>
+       <div class="jd-sidebar-box-header">2017校园招聘</div>
+      <div class="jd-checkboxes">
+						<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx04001" >
+                  <label>软件开发类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx04002" >
+                  <label>数据与算法类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx04003" >
+                  <label>安全技术类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx04004" >
+                  <label>测试类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx04005" >
+                  <label>技术支持类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx04006" >
+                  <label>硬件开发类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx02001" >
+                  <label>供应链管理类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx02002" >
+                  <label>客户服务类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx01001" >
+                  <label>法务风控类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx01002" >
+                  <label>财务类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx01003" >
+                  <label>人力资源类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx01004" >
+                  <label>行政类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx01005" >
+                  <label>战略合作类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx01006" >
+                  <label>采购销售类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx01007" >
+                  <label>营销类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx01008" >
+                  <label>公关类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx05001" >
+                  <label>设计类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx06001" >
+                  <label>产品策划类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx06002" >
+                  <label>项目类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx06003" >
+                  <label>产品运营类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx11001" >
+                  <label>金融市场类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx11002" >
+                  <label>金融风控类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx11003" >
+                  <label>金融产品类</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="jfx10001" >
+                  <label>区域未来之星</label>
+                </div>
+	     	  </div>
+    </div>
+
+    <div id="city" class="jd-sidebar-box">
+      <div class="jd-sidebar-box-header">办公地点</div>
+
+      <div class="jd-checkboxes">
+		  				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="CS0102">
+                  <label>北京</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="CS0101">
+                  <label>上海</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="CS0103">
+                  <label>广州</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="CS0104">
+                  <label>深圳</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="CS0106">
+                  <label>武汉</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="CS0107">
+                  <label>成都</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="CS0111">
+                  <label>西安</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="CS0108">
+                  <label>南京</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="016">
+                  <label>杭州</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="17">
+                  <label>重庆</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="18">
+                  <label>海外</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="CS106">
+                  <label>远程面试</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="26">
+                  <label>哈尔滨</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="ptype" value="CS0116">
+                  <label>大连</label>
+                </div>
+	     	  </div>
+    </div>
+	<div id="company" class="jd-sidebar-box">
+      <div class="jd-sidebar-box-header">公司名称</div>
+
+      <div class="jd-checkboxes">
+		  				<div class="jd-checkbox">
+                  <input type="checkbox" name="jType" value="30">
+                  <label>京东集团</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="jType" value="01">
+                  <label>京东商城</label>
+                </div>
+	     				<div class="jd-checkbox">
+                  <input type="checkbox" name="jType" value="05">
+                  <label>京东金融</label>
+                </div>
+	     	  </div>
+    </div>
+  </div>
+  -->
+
+  <!-- 右侧主体 -->
+  <!--<div class="jd-main-area">-->
+    <div class="recruit-search-bar">
+      <div class="recruit-search-inp recruit-search-inp-post">
+        <input type="search" placeholder="职位类别" value="" id="searchDicName" readonly />
+        <input type="hidden" id="postHidden" value=""/>
+        <!-- 20160701 两个POP代替两种不同的搜索状态 -->
+        
+        <div class="recruit-search-inp-pop post" style="display:none">
+          <ul id="jobcategory">
+          	<!--
+            <li class="recruit-search-inp-pop-item">视觉设计</li>
+            <li class="recruit-search-inp-pop-item">交互设计</li>
+            <li class="recruit-search-inp-pop-item">硬件设计</li>
+            -->
+          </ul>
+        </div>
+        
+        <div class="recruit-search-inp-pop classify" style="display:none">
+          <ul>
+          	          	<li class="recruit-search-inp-pop-item" id="jfx04">
+          		<div class="recruit-search-inp-pop-item-classify">
+          			<div class="recruit-search-inp-pop-item-class">技术</div>
+          		</div>
+          	</li>	
+          	          	<li class="recruit-search-inp-pop-item" id="jfx02">
+          		<div class="recruit-search-inp-pop-item-classify">
+          			<div class="recruit-search-inp-pop-item-class">供应链</div>
+          		</div>
+          	</li>	
+          	          	<li class="recruit-search-inp-pop-item" id="jfx01">
+          		<div class="recruit-search-inp-pop-item-classify">
+          			<div class="recruit-search-inp-pop-item-class">市场与职能</div>
+          		</div>
+          	</li>	
+          	          	<li class="recruit-search-inp-pop-item" id="jfx05">
+          		<div class="recruit-search-inp-pop-item-classify">
+          			<div class="recruit-search-inp-pop-item-class">设计</div>
+          		</div>
+          	</li>	
+          	          	<li class="recruit-search-inp-pop-item" id="jfx06">
+          		<div class="recruit-search-inp-pop-item-classify">
+          			<div class="recruit-search-inp-pop-item-class">产品</div>
+          		</div>
+          	</li>	
+          	          	<li class="recruit-search-inp-pop-item" id="jfx08">
+          		<div class="recruit-search-inp-pop-item-classify">
+          			<div class="recruit-search-inp-pop-item-class">管理培训生</div>
+          		</div>
+          	</li>	
+          	          	<li class="recruit-search-inp-pop-item" id="jfx09">
+          		<div class="recruit-search-inp-pop-item-classify">
+          			<div class="recruit-search-inp-pop-item-class">海外技术招聘</div>
+          		</div>
+          	</li>	
+          	          	<li class="recruit-search-inp-pop-item" id="jfx07">
+          		<div class="recruit-search-inp-pop-item-classify">
+          			<div class="recruit-search-inp-pop-item-class">京锐计划</div>
+          		</div>
+          	</li>	
+          	          	<li class="recruit-search-inp-pop-item" id="jfx11">
+          		<div class="recruit-search-inp-pop-item-classify">
+          			<div class="recruit-search-inp-pop-item-class">金融</div>
+          		</div>
+          	</li>	
+          	          	<li class="recruit-search-inp-pop-item" id="jfx10">
+          		<div class="recruit-search-inp-pop-item-classify">
+          			<div class="recruit-search-inp-pop-item-class">区域未来之星</div>
+          		</div>
+          	</li>	
+          	          </ul>
+        </div>
+  
+      </div>
+      
+      <div class="recruit-search-inp recruit-search-inp-site">
+      	<input type="search" placeholder="面试地点" id="searchWrokPlaceName" readonly />
+      	<input type="hidden" id="siteHidden" />
+      	<div class="recruit-search-inp-pop site" style="display:none">
+          <ul>
+          	          		<li class="recruit-search-inp-pop-item" id="CS0102" >北京</li>
+          	          		<li class="recruit-search-inp-pop-item" id="CS0101" >上海</li>
+          	          		<li class="recruit-search-inp-pop-item" id="CS0103" >广州</li>
+          	          		<li class="recruit-search-inp-pop-item" id="CS0104" >深圳</li>
+          	          		<li class="recruit-search-inp-pop-item" id="CS0106" >武汉</li>
+          	          		<li class="recruit-search-inp-pop-item" id="CS0107" >成都</li>
+          	          		<li class="recruit-search-inp-pop-item" id="CS0111" >西安</li>
+          	          		<li class="recruit-search-inp-pop-item" id="CS0108" >南京</li>
+          	          		<li class="recruit-search-inp-pop-item" id="016" >杭州</li>
+          	          		<li class="recruit-search-inp-pop-item" id="17" >重庆</li>
+          	          		<li class="recruit-search-inp-pop-item" id="18" >海外</li>
+          	          		<li class="recruit-search-inp-pop-item" id="CS106" >远程面试</li>
+          	          		<li class="recruit-search-inp-pop-item" id="26" >哈尔滨</li>
+          	          		<li class="recruit-search-inp-pop-item" id="CS0116" >大连</li>
+          	          </ul>
+        </div>
+      </div>
+      <!--
+	  		 <input id="seachParam" type="search" placeholder="京东商城">
+	  	  -->
+	<!--<span id="seachJob" onmouseover="this.style.cursor='pointer'">搜索</span>-->
+		<span id="seachJob" onmouseover="this.style.cursor='pointer'" style="width:80px; float:none;">筛选</span>
+		<span id="seachParamDel" onmouseover="this.style.cursor='pointer'" style="width:80px; background-color:#BBC7D0; float:none; margin-left:5px;">清空</span>
+    </div>
+
+ <!--  <ul class="recruit-hotwords">
+      <li><a href="#">管理培训生</a></li>
+      <li><a href="#">国际管培生</a></li>
+      <li><a href="#">京锐实习生</a></li>
+    </ul>-->
+    
+    <!-- S 20160701 add -->
+    <div class="recruit-jobscount"></div>
+    <!-- E 20160701 add -->
+    
+   <!--
+   <ul class="recruit-hotwords">
+      <li><a id="hotJob" href="javascript:;">热门职位</a></li>
+   </ul>
+   -->
+
+    <!-- 职位列表 -->
+    <ul class="recruit-job-list">
+  
+    </ul>
+
+    <!-- 翻页按钮 -->
+    <div class="jd-pagination-wrap">
+      <div class="jd-pagination">
+        <!-- 
+          disabled: 翻页按钮不可用
+          active: 当前页
+         -->
+      <!--  <a onclick="prevPage();" class="prev disabled" href="#"></a>
+        <div class="jd-pagination-nav">
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+        </div>
+        <a onclick="nextPage();" class="next" href="javascript:;"></a>-->
+      </div>
+    </div>
+  <!--</div>-->
+</div>
+
+<!-- footer -->
+<div class="footer">
+	<div class="wrap">
+		<ul class="friend-link">
+			<li><a href="//www.jd.com" target="_blank">京东(JD.COM)</a></li>
+			<li>|</li>
+			<li><a href="//zhaopin.jd.com" target="_blank">京东招聘</a></li>
+			<li>|</li>
+			<li><a href="//xiaoyuan.jd.com" target="_blank">高校合作</a></li>
+			<li>|</li>
+			<li><a href="//edu.jd.com/" target="_blank">校园特权</a></li>
+			<li>|</li>
+			<li><a href="//gongyi.jd.com/index/index_pwp_gy_0_0.html" target="_blank">京东公益</a></li>
+			<li>|</li>
+			<li><a href="//help.jd.com/index.html" target="_blank">客服中心</a></li>
+		</ul>
+		<span class="copyright">
+			Copyright © 2004-2015  京东JD.com 版权所有
+		</span>
+		<a href="//jdc.jd.com/" title="京东用户体验设计部" target="_blank" class="jdc-link"></a>
+	</div>
+</div>
+<script type="text/javascript">
+    var jaq = jaq || [];
+    jaq.push(['account', 'JA2016_113480']); //站点编号
+    jaq.push(['domain', 'campus.jd.com']);  //站点域名
+	jaq.push(['topic','_topic_']); //topic
+(function () {
+        var ja = document.createElement('script');
+        ja.type = 'text/javascript';
+        ja.async = true;
+        ja.src = ('https:' == document.location.protocol ? 'https://wlssl' : 'http://wl') + '.jd.com/joya.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ja, s);
+    })();
+</script>
+
+<!-- 窗口2 2015-07-28 -->
+<div id="popup2" class="jd-popup-box hide popup-sm">
+  
+  <!-- 内容 -->
+  <div class="content-area">
+  	<p class="black-text">最多只能投递1个职位，您已超过最大限度！</p>
+  	<div class="popup-checkbox-wrap">
+	  	<div class="jd-checkbox dim">
+	      <input type="checkbox">
+	      <label>阻止此页面创建更多对话框</label>
+	    </div>
+  	</div>
+  </div>
+
+  <!-- 底部按钮 -->
+  <div class="footer-area">
+    <button class="jd-confirm-btn">确定</button>
+  </div>
+</div>
+<!-- 窗口2 2015-07-28 -->
+
+
+<!-- 窗口3 2015-07-28 -->
+<div id="popup3" class="jd-popup-box hide popup-sm">
+  
+  <!-- 内容 -->
+  <div id="VolunteerCategories" class="content-area">
+  	<p class="black-text">您最多可以投递1个职位,请选择面试城市<!--，当前投递的职位是--></p>
+  	<!--<p class="gray-text">注意：招聘将根据志愿顺序优先录取</p>-->
+  	<ul id="interviewPlaces" class="popup-checkbox-wrap checkbox-lg">
+		<!-- 
+  		<li class="jd-checkboxes-ul-li-multi-list">
+  			<div id="zy1" class="jd-checkbox">
+          <input name="zy1" type="checkbox" value="1">
+          <label>第一志愿</label>
+        </div>
+  		</li>
+  		<li class="jd-checkboxes-ul-li-multi-list">
+  			<div id="zy2" class="jd-checkbox">
+          <input  name="zy2" type="checkbox" value="2">
+          <label>第二志愿</label>
+        </div>
+  		</li>
+		<li class="jd-checkboxes-ul-li-multi-list">
+  			<div id="zy3" class="jd-checkbox">
+          <input  name="zy3" type="checkbox" value="3">
+          <label>第二志愿</label>
+        </div>
+  		</li>
+		<li class="jd-checkboxes-ul-li-multi-list">
+  			<div id="zy4" class="jd-checkbox">
+          <input  name="zy4" type="checkbox" value="4">
+          <label>第二志愿</label>
+        </div>
+  		</li>
+		-->
+  	</ul>
+  </div>
+
+  <!-- 底部按钮 -->
+  <div class="footer-area">
+    <button class="jd-confirm-btn">确定</button>
+    <button class="jd-cancel-btn">取消</button>
+  </div>
+</div>
+<!-- 窗口3 2015-07-28 -->
+<script src="js/jquery_1.js"></script>
+<script src="js/main_1.js"></script>
+<script src="js/job_index.js"></script>
+<!-- 文字两行 超出的用... -->
+<script src="js/clamp.min.js"></script>
+</body>
+</html>
